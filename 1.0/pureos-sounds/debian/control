@@ -1,0 +1,13 @@
+Source: pureos-sounds
+Section: gnome
+Priority: optional
+Maintainer: PureOS GNU/Linux developers <dev@puri.sm>
+Build-Depends: debhelper (>= 5)
+Standards-Version: 3.7.2
+
+Package: pureos-sounds
+Architecture: all
+Depends: ${misc:Depends}
+Conflicts: gnome-audio, ubuntu-sounds
+Description: PureOS's GNOME audio theme
+ Sounds to spruce up the GNOME desktop environment.
