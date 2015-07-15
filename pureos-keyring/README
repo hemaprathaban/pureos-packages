@@ -1,0 +1,24 @@
+README for the pureos-keyring package
+=====================================
+
+Introduction
+------------
+
+The PureOS project signs its Release files that are stored on the PureOS
+archive and its mirrors with the keys contained in this package.
+
+A quick overview about this package:
+
+* Each actively used key is placed in /etc/apt/trusted.gpg.d/ to be used by
+  "apt" and its apt-key command. The signatures of acquired Release files
+  are checked against this key database. It thus contains all keys of
+  releases that are still supported and need to be active.
+* /usr/share/keyrings/pureos-archive-keyring.gpg:
+  A keyring including all actively used keys to sign Release files in our
+  supported releases is shipped in /usr/share/keyrings.
+* /usr/share/keyrings/pureos-archive-removed-keys.gpg:
+  A keyring including all keys used by previous releases, which are no
+  longer supported. These keys are no longer used to sign Release files.
+
+More information about the archive authentication feature can be found
+in the manpage apt-secure(8).
