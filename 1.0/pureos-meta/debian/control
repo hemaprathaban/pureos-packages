@@ -86,33 +86,3 @@ Architecture: all
 Priority: optional
 Depends: pureos-base, pureos-desktop-common, pureos-sounds, gvfs-fuse, gvfs-backends, cinnamon, alacarte, indicator-applet, gstreamer0.10-alsa, gstreamer0.10-plugins-base-apps, gstreamer0.10-pulseaudio, libasound2-plugins, libgnomevfs2-extra, pulseaudio, pulseaudio-esound-compat, pulseaudio-module-gconf, pulseaudio-module-x11, pulseaudio-module-bluetooth, rarian-compat, gedit, ibus-gtk, ibus-m17n, ibus-table, libgl1-mesa-glx, libgl1-mesa-dri, policykit-desktop-privileges, yelp, language-selector-gnome, libpam-ck-connector, libsasl2-modules, libxp6, indicator-application, indicator-messages, indicator-datetime, indicator-power, indicator-sound, synaptic, software-properties-gtk, apturl, xdg-user-dirs-gtk, screen-resolution-extra, zenity, gnome-keyring, libpam-gnome-keyring, indicator-messages, compton, colord, icc-profiles-free, baobab, indicator-applet-complete, indicator-sound, indicator-datetime, indicator-keyboard, indicator-messages, indicator-power, indicator-printers, indicator-application, indicator-bluetooth, gir1.2-soup-2.4, lightdm-gtk-greeter, lightdm, lightdm-gtk-greeter-settings, ubuntu-mono, light-themes, indicator-session, onboard, python-software-properties
 Description: PureOS Cinnamon metapackage.
-
-
-Package: pureos-gnome-base
-Architecture: all
-Priority: optional
-Description: transitional package, you can remove this safely.
-
-
-Package: pureos-gnome-base-recommended
-Architecture: all
-Priority: optional
-Description: transitional package, you can remove this safely.
-
-
-Package: pureos-themes
-Architecture: all
-Priority: optional
-Description: transitional package, you can remove this safely.
-
-
-Package: pureos-sugar-recommended
-Architecture: all
-Priority: optional
-Description: transitional package, you can remove this safely.
-
-
-Package: pureos-sugar
-Architecture: all
-Priority: optional
-Description: transitional package, you can remove this safely.
