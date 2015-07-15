@@ -1,2 +1,2 @@
 # pureos-packages
-public repository for PureOS
+Public repository for PureOS-unique packages.
