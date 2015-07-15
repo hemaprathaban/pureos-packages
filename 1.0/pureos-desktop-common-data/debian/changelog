@@ -1,4 +1,4 @@
-pureos-desktop-common-data (1.0.12) arcturus; urgency=medium
+pureos-desktop-common-data (1.0.12-1) arcturus; urgency=medium
 
   * Updated gnome configuration files.
 
