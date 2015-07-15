@@ -1,0 +1,14 @@
+Source: pureos-wallpapers
+Section: pureos
+Priority: optional
+Maintainer: PureOS GNU/Linux developers <dev@puri.sm>
+Build-Depends-Indep: debhelper
+Standards-Version: 3.9.5
+
+Package: pureos-wallpapers
+Architecture: all
+Priority: optional
+Description: PureOS Wallpapers
+ The default Wallpapers for PureOS.
+ .
+
