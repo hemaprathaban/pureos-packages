@@ -1,0 +1,9 @@
+deb http://mirror.fsf.org/trisquel/ belenos main
+deb-src http://mirror.fsf.org/trisquel/ belenos main
+deb http://mirror.fsf.org/trisquel/ belenos-security main
+deb-src http://mirror.fsf.org/trisquel/ belenos-security main
+deb http://mirror.fsf.org/trisquel/ belenos-updates main
+deb-src http://mirror.fsf.org/trisquel/ belenos-updates main
+
+deb http://archive.puri.sm arcturus main
+deb-src http://archive.puri.sm arcturus main

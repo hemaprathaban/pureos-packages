@@ -22,7 +22,7 @@ GRUB_CMDLINE_LINUX=""
 # you can see them in real GRUB with the command `vbeinfo'
 GRUB_GFXMODE=1920x1080
 GRUB_GFXPAYLOAD_LINUX=keep
-GRUB_BACKGROUND="/usr/share/backgrounds/arcturus.png"
+GRUB_BACKGROUND="/usr/share/backgrounds/pureos-grub.png"
 
 # Uncomment if you don't want GRUB to pass "root=UUID=xxx" parameter to Linux
 #GRUB_DISABLE_LINUX_UUID=true

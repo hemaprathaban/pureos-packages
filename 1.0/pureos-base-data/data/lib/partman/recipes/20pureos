@@ -1,23 +1,28 @@
-partman-auto/text/home_scheme ::
+partman-auto/text/atomic_scheme ::
 
-500 5000 15000 ext4
+1 1 1 free
+	$iflabel{ gpt }
+	$reusemethod{ }
+	method{ biosgrub } .
+
+128 512 256 ext2
+	$defaultignore{ }
 	method{ format }
 	format{ }
 	use_filesystem{ }
-	filesystem{ ext4 }
-	mountpoint{ / }
-	options/relatime{ relatime } .
+	filesystem{ ext2 }
+	mountpoint{ /boot } .
 
-96 512 300% linux-swap
+900 10000 -1 $default_filesystem
 	$lvmok{ }
+	method{ format }
+	format{ }
+	use_filesystem{ }
+	$default_filesystem{ }
+	mountpoint{ / } .
+
+100% 512 200% linux-swap
+	$lvmok{ }
+	$reusemethod{ }
 	method{ swap }
 	format{ } .
-
-100 10000 -1 xfs
-        $lvmok{ }
-        method{ format }
-        format{ }
-        use_filesystem{ }
-        filesystem{ xfs }
-        mountpoint{ /home }
-        options/relatime{ relatime } .

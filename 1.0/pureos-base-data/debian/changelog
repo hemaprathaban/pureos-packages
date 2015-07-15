@@ -1,3 +1,16 @@
+pureos-base-data (1.1.10) arcturus; urgency=medium
+
+  * Added pureos-grub boot image. 
+  * Fixed bug in Perl vendor files.
+
+ -- Casey Parker <casey.parker@puri.sm>  Wed, 15 Jul 2015 09:49:06 -0700
+
+pureos-base-data (1.1.9) arcturus; urgency=medium
+
+  * Updated profile skel files. 
+
+ -- Casey Parker <casey.parker@puri.sm>  Wed, 15 Jul 2015 09:36:43 -0700
+
 pureos-base-data (1.1.8) arcturus; urgency=medium
 
   * fixed grub not using the correct resolution (#52)

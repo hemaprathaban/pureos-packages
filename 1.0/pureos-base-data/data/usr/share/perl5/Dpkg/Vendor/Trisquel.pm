@@ -1,4 +1,4 @@
-# Copyright © 210 Ruben Rodriguez <ruben@pureos.info>
+# Copyright © 210 Ruben Rodriguez <ruben@trisquel.info>
 # Copyright © 2009 Raphaël Hertzog <hertzog@debian.org>
 # Copyright © 2008 Ian Jackson <ian@davenant.greenend.org.uk>, Colin Watson
 # <cjwatson@ubuntu.com>, James Westby <jw+debian@jameswestby.net>
@@ -17,7 +17,7 @@
 # with this program; if not, write to the Free Software Foundation, Inc.,
 # 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 
-package Dpkg::Vendor::PureOS;
+package Dpkg::Vendor::Trisquel;
 
 use strict;
 use warnings;
@@ -29,7 +29,7 @@ use base 'Dpkg::Vendor::Debian';
 
 =head1 NAME
 
-Dpkg::Vendor::PureOS - PureOS vendor object
+Dpkg::Vendor::Trisquel - Trisquel vendor object
 
 =head1 DESCRIPTION
 
@@ -48,16 +48,16 @@ sub run_hook {
         # check that Maintainer/XSBC-Original-Maintainer comply to
         # https://wiki.ubuntu.com/DebianMaintainerField
         if (defined($fields->{'Version'}) and defined($fields->{'Maintainer'}) and
-           $fields->{'Version'} =~ /pureos/) {
-           if ($fields->{'Maintainer'} !~ /pureos/i) {
-               if (defined ($ENV{'DEBEMAIL'}) and $ENV{'DEBEMAIL'} =~ /\@pureos\.info/) {
-                   error(_g('Version number suggests PureOS changes, but Maintainer: does not have PureOS address'));
+           $fields->{'Version'} =~ /trisquel/) {
+           if ($fields->{'Maintainer'} !~ /trisquel/i) {
+               if (defined ($ENV{'DEBEMAIL'}) and $ENV{'DEBEMAIL'} =~ /\@trisquel\.info/) {
+                   error(_g('Version number suggests Trisquel changes, but Maintainer: does not have Trisquel address'));
                } else {
-                   warning(_g('Version number suggests PureOS changes, but Maintainer: does not have PureOS address'));
+                   warning(_g('Version number suggests Trisquel changes, but Maintainer: does not have Trisquel address'));
                }
            }
            unless ($fields->{'Original-Maintainer'}) {
-               warning(_g('Version number suggests PureOS changes, but there is no XSBC-Original-Maintainer field'));
+               warning(_g('Version number suggests Trisquel changes, but there is no XSBC-Original-Maintainer field'));
            }
         }
 
@@ -73,7 +73,7 @@ sub run_hook {
     } elsif ($hook eq "keyrings") {
         my @keyrings = $self->SUPER::run_hook($hook);
 
-        push(@keyrings, '/usr/share/keyrings/pureos-archive-keyring.gpg');
+        push(@keyrings, '/usr/share/keyrings/trisquel-archive-keyring.gpg');
         return @keyrings;
     }
 }
@@ -82,7 +82,7 @@ sub run_hook {
 
 =over
 
-=item $bugs = Dpkg::Vendor::PureOS::find_launchpad_closes($changes)
+=item $bugs = Dpkg::Vendor::Trisquel::find_launchpad_closes($changes)
 
 Takes one string as argument and finds "LP: #123456, #654321" statements,
 which are references to bugs on Launchpad. Returns all closed bug
