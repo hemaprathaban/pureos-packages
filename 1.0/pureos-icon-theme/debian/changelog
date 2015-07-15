@@ -1,0 +1,47 @@
+pureos-icon-theme (1.0.13) arcturus; urgency=medium
+
+  * Updated for cinnamon menu.
+
+ -- Casey Parker <casey.parker@puri.sm>  Thu, 21 May 2015 17:28:37 -0700
+
+pureos-icon-theme (1.0.12) arcturus; urgency=medium
+
+  * Updated for cinnamon desktop.
+
+ -- Casey Parker <casey.parker@puri.sm>  Thu, 21 May 2015 17:28:36 -0700
+
+pureos-icon-theme (1.0.11) arcturus; urgency=medium
+
+  * Updated browser icon.
+
+ -- Casey Parker <casey.parker@puri.sm>  Thu, 21 May 2015 17:28:36 -0700
+
+pureos-icon-theme (1.0.10) arcturus; urgency=medium
+
+  * Fixed distributor-logo.svg
+
+ -- Casey Parker <casey.parker@puri.sm>  Thu, 21 May 2015 17:28:36 -0700
+
+pureos-icon-theme (1.0.9) arcturus; urgency=medium
+
+  * Fixed compatibility issue.
+
+ -- Casey Parker <casey.parker@puri.sm>  Thu, 21 May 2015 17:28:35 -0700
+
+pureos-icon-theme (1.0.8) arcturus; urgency=medium
+
+  * replace trisquel with pureos
+
+ -- Casey Parker <casey.parker@puri.sm>  Thu, 21 May 2015 17:28:35 -0700
+
+pureos-icon-theme (1.0.7) arcturus; urgency=medium
+
+  * Fixed versioning.
+
+ -- Casey Parker <casey.parker@puri.sm>  Thu, 21 May 2015 17:28:34 -0700
+
+pureos-icon-theme (1.0.6) arcturus; urgency=medium
+
+  * Initial release.
+
+ -- Casey Parker <casey.parker@puri.sm>  Thu, 21 May 2015 17:28:34 -0700
