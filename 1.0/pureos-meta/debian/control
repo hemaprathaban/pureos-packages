@@ -1,0 +1,118 @@
+Source: pureos-meta
+Section: metapackages
+Priority: optional
+Maintainer: PureOS GNU/Linux developers <dev@puri.sm>
+Build-Depends: debhelper (>= 4.1.0)
+Standards-Version: 3.9.5
+
+Package: pureos-minimal
+Architecture: all
+Priority: important
+Depends: adduser, apt, aptitude, apt-utils, bzip2, console-setup, dash, debconf, dhcp3-client, eject, gnupg, gnupg-curl, gnupg-agent, ifupdown, initramfs-tools, iproute, iputils-ping, kbd, less, locales, lsb-release, makedev, mawk, module-init-tools, net-tools, netbase, netcat-openbsd, ntpdate, passwd, procps, python, sudo, rsyslog, tasksel, tzdata, udev, upstart, ureadahead, vim-tiny, whiptail, pureos-keyring
+Description: PureOS base metapackage.
+ Dependency list for PureOS base installation.
+ Provides a minimal console environment.
+
+
+Package: pureos-codecs
+Architecture: all
+Priority: optional
+Depends: dconf-gsettings-backend | gsettings-backend, libass4 (>= 0.9.7), libbz2-1.0, libc6 (>= 2.7), libcairo2 (>= 1.2.4), libcdaudio1 (>= 0.99.12p2), libcurl3-gnutls (>= 7.16.2-1), libdc1394-22, libdca0, libdirac-encoder0, libdirectfb-1.2-9, libdvdnav4, libdvdread4, libfaad2, libgcc1 (>= 1:4.1.1), libglib2.0-0 (>= 2.26.0), libgme0 (>= 0.5.5), libgsm1 (>= 1.0.13), libgstreamer-plugins-base0.10-0 (>= 0.10.33), libgstreamer0.10-0 (>= 0.10.33), libjasper1 (>= 1.900.1), libkate1 (>= 0.3.0), libmimic0, libmms0 (>= 0.4), libmodplug1, libmpcdec6 (>= 1:0.1~r435), libofa0 (>= 0.9.3), liborc-0.4-0 (>= 1:0.4.14), libpng12-0 (>= 1.2.13-4), librsvg2-2 (>= 2.14.4), librtmp0 (>= 2.3), libschroedinger-1.0-0 (>= 1.0.9), libslv2-9 (>= 0.6.4-1~), libsndfile1 (>= 1.0.20), libsoundtouch0, libssl1.0.0 (>= 1.0.0), libstdc++6 (>= 4.1.1), libvpx1, libwildmidi1 (>= 0.2.3), libx11-6, libzbar0 (>= 0.10), gstreamer0.10-plugins-base, gstreamer1.0-libav, gstreamer0.10-plugins-good, gstreamer0.10-plugins-bad, gstreamer0.10-plugins-ugly, gstreamer1.0-plugins-good, gstreamer1.0-plugins-bad, gstreamer1.0-plugins-ugly, gstreamer1.0-plugins-base, gstreamer1.0-x, gstreamer0.10-x, gstreamer1.0-crystalhd, gstreamer1.0-libav, gstreamer1.0-vaapi, gstreamer1.0-alsa, gstreamer1.0-clutter, gstreamer1.0-nice, gstreamer1.0-pulseaudio, gstreamer1.0-tools, gstreamer1.0-fluendo-mp3, gstreamer1.0-gnonlin, gstreamer0.10-vaapi, gstreamer0.10-alsa, gstreamer0.10-nice, gstreamer0.10-pulseaudio, gstreamer0.10-tools, gstreamer0.10-fluendo-mp3, gstreamer0.10-gnonlin, i965-va-driver
+Description: PureOS codecs metapackage
+ Dependency list for PureOS base installation.
+ Provides a set of gstreamer codecs. This is just a hack to avoid installing libflite1.
+
+
+Package: pureos-base
+Architecture: all
+Priority: optional
+Depends: bc, dc, dmraid, jfsutils, reiserfsprogs, reiser4progs, xfsprogs, pureos-base-data, libnss-mdns, laptop-detect, acpi-support, acpid, alsa-base, alsa-utils, anacron, avahi-autoipd, ca-certificates, consolekit, doc-base, screen, aptitude, at, busybox-static, cpio, cron, dmidecode, dnsutils, dosfstools, ed, file, ftp, hdparm, info, iptables, language-selector-common, logrotate, lshw, lsof, ltrace, man-db, mime-support, parted, vim, nano, pciutils, psmisc, rsync, strace, time, usbutils, wget, dvd+rw-tools, wireless-tools, pcmciautils, ecryptfs-utils, apparmor, apparmor-utils, mdadm, btrfs-tools, cryptsetup, openssh-client, lvm2, dmraid
+Recommends: unzip, zip, beep, nmap, unp, debfoster, bash-completion, gddrescue, modemmanager, wvdial, openfwwf, atheros-firmware, firmware-carl9170, open-ath9k-htc-firmware
+Description: PureOS base metapackage.
+ Dependency list for PureOS base installation.
+ Provides a complete console environment.
+
+
+Package: pureos-base-recommended
+Architecture: all
+Priority: optional
+Depends: unzip, zip, beep, nmap, unp, debfoster, bash-completion, gddrescue, modemmanager, wvdial, openfwwf, atheros-firmware, firmware-carl9170, open-ath9k-htc-firmware
+Description: PureOS base metapackage.
+ Dependency list for PureOS base installation.
+ Provides a complete console environment.
+
+
+Package: pureos-desktop-common
+Architecture: all
+Priority: optional
+Depends: apt-xapian-index, pureos-desktop-common-data, dmz-cursor-theme, xcursor-themes, foo2zjs, min12xxw, pxljr, splix, im-config, hplip, ghostscript-x, foomatic-db, foomatic-db-engine, foomatic-filters, printer-driver-hpijs, pureos-gtk-theme, pureos-icon-theme, genisoimage, dbus-x11, cups, cups-bsd, cups-client, cups-driver-gutenprint, desktop-file-utils, openprinting-ppds, ttf-dejavu-core, fonts-droid, fonts-ekmukta, xdg-utils, xkb-data, xserver-xorg, xterm, pm-utils, xdg-user-dirs, xdg-user-dirs-gtk, ntfs-3g, dnsmasq-base, libdvdread4, libdvdnav4, libcdaudio1, usb-modeswitch-data, usb-modeswitch, mobile-broadband-provider-info, notify-osd, dconf-tools, compton, cups-pk-helper, smbclient
+Recommends: unace, arj, p7zip, gstreamer0.10-plugins-ugly, ttf-beteckna, fonts-dustin, ttf-freefont, ttf-junicode, ttf-marvosym, fonts-mgopen, ttf-radisnoir, fonts-sil-andika, ttf-summersby, ttf-tiresias, ttf-tuffy, xnest, xfonts-scalable, libdirac-encoder0, libvpx1, pureos-codecs
+Description: PureOS desktop metapackage.
+ Dependency list for PureOS base installation.
+ Provides a X11 environment and a set of tools common to all graphical PureOS editions.
+
+
+Package: pureos-desktop-common-recommended
+Architecture: all
+Priority: optional
+Depends: unace, arj, p7zip, gstreamer0.10-plugins-ugly, ttf-beteckna, fonts-dustin, ttf-freefont, ttf-junicode, ttf-marvosym, fonts-mgopen, ttf-radisnoir, fonts-sil-andika, ttf-summersby, ttf-tiresias, ttf-tuffy, xnest, xfonts-scalable, libdirac-encoder0, libvpx1, pureos-codecs
+Description: PureOS base metapackage.
+ Dependency list for PureOS base installation.
+ Provides a complete console environment.
+
+
+Package: pureos
+Architecture: all
+Priority: optional
+Depends: pureos-base, pureos-desktop-common, pureos-session, gnome-app-install, pureos-sounds, gvfs-fuse, gvfs-backends, gnome-screensaver, alacarte, gnome-applets, gnome-control-center, gnome-media, gnome-menus,  gnome-nettool, gnome-panel, indicator-applet, gnome-power-manager, gnome-system-monitor, gnome-terminal, gnome-themes-standard, gstreamer0.10-alsa, gstreamer0.10-plugins-base-apps, gstreamer0.10-pulseaudio, libasound2-plugins, libgnomevfs2-extra, metacity, nautilus, nautilus-share, nautilus-sendto, pulseaudio, pulseaudio-esound-compat, pulseaudio-module-gconf, pulseaudio-module-x11, pulseaudio-module-bluetooth, gnome-bluetooth, gnome-user-share, rarian-compat, gedit, ibus-gtk, ibus-m17n, ibus-table, libgl1-mesa-glx, libgl1-mesa-dri, gnome-system-tools, policykit-1-gnome, policykit-desktop-privileges, yelp, language-selector-gnome, libpam-ck-connector, libsasl2-modules, libxp6, indicator-application, indicator-messages, indicator-datetime, indicator-power, indicator-sound, gnome-disk-utility, libgnome2-perl, pureos-wallpapers, synaptic, update-notifier, software-properties-gtk, apturl, xdg-user-dirs-gtk, screen-resolution-extra, zenity, gnome-keyring, libpam-gnome-keyring, indicator-messages, network-manager-openvpn-gnome | wicd, network-manager-gnome | wicd, gnome-tweak-tool, gnome-user-guide, compton, colord, icc-profiles-free, baobab, gnome-dictionary, gnome-screenshot, gnome-search-tool, gnome-system-log, indicator-applet-complete, indicator-sound, indicator-datetime, indicator-keyboard, indicator-messages, indicator-power, indicator-printers, indicator-application, indicator-bluetooth, gir1.2-soup-2.4, gnome-settings-daemon, unity-greeter, lightdm, ubuntu-mono, light-themes, indicator-session, onboard, python-software-properties
+Recommends: vino, nautilus-open-terminal, gnome-screensaver, libreoffice-style-galaxy, libreoffice-style-tango, libreoffice-gnome, libreoffice-calc, libreoffice-impress, libreoffice-writer, bogofilter, totem, totem-mozilla, totem-plugins, pitivi, bluez, bluez-cups, bluez-alsa, bluez-gstreamer, evolution, evolution-plugins, evolution-indicator, gvfs-bin, espeak, espeak-data, inputattach, mousetweaks, usb-creator-gtk, gnome-raw-thumbnailer, gnome-xcf-thumbnailer, ooo-thumbnailer, seahorse, ssh-askpass-gnome, gnome-session-canberra, libcanberra-pulse, gucharmap, evince, file-roller, gcalctool, brasero, brasero-cdrkit, abrowser, xul-ext-https-everywhere, xul-ext-privacy-badger, xul-ext-random-agent-switcher, xul-ext-torproxy, xul-ext-youtube-all-html5, transmission-gtk, simple-scan, oggconvert, aisleriot, gnome-sudoku, gnomine, glchess, liferea, plymouth-theme-pureos-logo, plymouth-theme-pureos-text, gthumb, pidgin, pidgin-otr, pidgin-plugin-pack, pidgin-libnotify, deja-dup, python-indicate, python-libproxy, libgail-3-0, libgail-common, gnome-accessibility-themes, at-spi2-core, libglib2.0-bin, gnome-accessibility-themes, libatk-adaptor, python-gobject-cairo, gimp, rhythmbox-mozilla, rhythmbox-plugin-cdrecorder, rhythmbox-plugins, python-mako, vinagre, electrum, libreoffice, vim, gnome-mahjongg, cheese
+Suggests: casper, ubiquity, grub-pc, ubiquity-frontend-gtk, gparted, language-pack-en, language-pack-es, language-pack-gnome-en, language-pack-gnome-es, libreoffice-l10n-es, libreoffice-help-es, libreoffice-help-en-us, hyphen-en-us, mythes-en-us, lupin-casper, ubiquity-slideshow-pureos, abrowser-locale-es, icecat-locale-en, aspell, aspell-en, aspell-es, dictionaries-common, language-pack-en, language-pack-en-base, language-pack-gnome-en, language-pack-gnome-en-base, wamerican, wbritish, wspanish
+Description: PureOS metapackage (desktop edition).
+ Dependency list for PureOS base installation.
+ Provides a full featured GNOME based desktop environment.
+
+
+Package: pureos-recommended
+Architecture: all
+Priority: optional
+Depends: vino, nautilus-open-terminal, gnome-screensaver, libreoffice-style-galaxy, libreoffice-style-tango, libreoffice-gnome, libreoffice-calc, libreoffice-impress, libreoffice-writer, bogofilter, totem, totem-mozilla, totem-plugins, pitivi, bluez, bluez-cups, bluez-alsa, bluez-gstreamer, evolution, evolution-plugins, evolution-indicator, gvfs-bin, espeak, espeak-data, inputattach, mousetweaks, usb-creator-gtk, gnome-raw-thumbnailer, gnome-xcf-thumbnailer, ooo-thumbnailer, seahorse, ssh-askpass-gnome, gnome-session-canberra, libcanberra-pulse, gucharmap, evince, file-roller, gcalctool, brasero, brasero-cdrkit, abrowser, transmission-gtk, simple-scan, oggconvert, aisleriot, gnome-sudoku, gnomine, glchess, liferea, plymouth-theme-pureos-logo, plymouth-theme-pureos-text, gthumb, pidgin, pidgin-otr, pidgin, pidgin-plugin-pack, pidgin-libnotify, deja-dup, python-indicate, python-libproxy, libgail-3-0, libgail-common, gnome-accessibility-themes, at-spi2-core, libglib2.0-bin, gnome-accessibility-themes, libatk-adaptor, python-gobject-cairo, gimp, rhythmbox-mozilla, rhythmbox-plugin-cdrecorder, rhythmbox-plugins, python-mako, vinagre, electrum, libreoffice, vim, gnome-mahjongg, cheese, kdenlive, vlc, gnome-font-viewer
+Description: PureOS recommended metapackage.
+ Dependency list for PureOS base installation.
+ Provides a full featured GNOME based desktop environment.
+
+
+Package: pureos-cinnamon
+Architecture: all
+Priority: optional
+Depends: pureos-base, pureos-desktop-common, pureos-sounds, gvfs-fuse, gvfs-backends, cinnamon, alacarte, indicator-applet, gstreamer0.10-alsa, gstreamer0.10-plugins-base-apps, gstreamer0.10-pulseaudio, libasound2-plugins, libgnomevfs2-extra, pulseaudio, pulseaudio-esound-compat, pulseaudio-module-gconf, pulseaudio-module-x11, pulseaudio-module-bluetooth, rarian-compat, gedit, ibus-gtk, ibus-m17n, ibus-table, libgl1-mesa-glx, libgl1-mesa-dri, policykit-desktop-privileges, yelp, language-selector-gnome, libpam-ck-connector, libsasl2-modules, libxp6, indicator-application, indicator-messages, indicator-datetime, indicator-power, indicator-sound, synaptic, software-properties-gtk, apturl, xdg-user-dirs-gtk, screen-resolution-extra, zenity, gnome-keyring, libpam-gnome-keyring, indicator-messages, compton, colord, icc-profiles-free, baobab, indicator-applet-complete, indicator-sound, indicator-datetime, indicator-keyboard, indicator-messages, indicator-power, indicator-printers, indicator-application, indicator-bluetooth, gir1.2-soup-2.4, lightdm-gtk-greeter, lightdm, lightdm-gtk-greeter-settings, ubuntu-mono, light-themes, indicator-session, onboard, python-software-properties
+Description: PureOS Cinnamon metapackage.
+
+
+Package: pureos-gnome-base
+Architecture: all
+Priority: optional
+Description: transitional package, you can remove this safely.
+
+
+Package: pureos-gnome-base-recommended
+Architecture: all
+Priority: optional
+Description: transitional package, you can remove this safely.
+
+
+Package: pureos-themes
+Architecture: all
+Priority: optional
+Description: transitional package, you can remove this safely.
+
+
+Package: pureos-sugar-recommended
+Architecture: all
+Priority: optional
+Description: transitional package, you can remove this safely.
+
+
+Package: pureos-sugar
+Architecture: all
+Priority: optional
+Description: transitional package, you can remove this safely.
