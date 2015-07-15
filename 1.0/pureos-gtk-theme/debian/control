@@ -1,0 +1,14 @@
+Source: pureos-gtk-theme
+Section: pureos
+Priority: optional
+Maintainer: PureOS GNU/Linux developers <dev@puri.sm>
+Build-Depends-Indep: debhelper
+Standards-Version: 3.5.9.0
+
+Package: pureos-gtk-theme
+Architecture: all
+Priority: optional
+Depends: gtk2-engines-pixbuf, gtk2-engines-murrine, gtk3-engines-unico
+Description: PureOS gtk theme.
+ A GTK2/3, metacity and xfwm4 theme for PureOS.
+ .
