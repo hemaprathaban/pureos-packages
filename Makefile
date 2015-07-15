@@ -1,5 +1,6 @@
 clean:
-	rm -f *~ \
+	rm -f \
+	*~ \
 	*.build \
 	*.changes \
 	*.dsc \
