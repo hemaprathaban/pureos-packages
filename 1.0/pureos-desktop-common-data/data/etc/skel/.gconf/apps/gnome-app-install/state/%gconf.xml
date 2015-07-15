@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="window_width" mtime="1435096617" type="int" value="700"/>
+	<entry name="window_height" mtime="1435096617" type="int" value="550"/>
+	<entry name="window_maximized" mtime="1435096617" type="bool" value="false"/>
+</gconf>

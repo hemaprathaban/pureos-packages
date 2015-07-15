@@ -1,0 +1,16 @@
+Source: pureos-desktop-common-data
+Section: pureos
+Priority: optional
+Maintainer: PureOS GNU/Linux developers <dev@puri.sm>
+Build-Depends-Indep: debhelper
+Standards-Version: 3.5.9.0
+
+Package: pureos-desktop-common-data
+Architecture: all
+Priority: optional
+Replaces: pureos-desktop-common
+Description: PureOS desktop metapackage - data files.
+ Virtual package providing a dependency list for PureOS base installation.
+ Provides a X11 environment and a set of tools common to all PureOS versions.
+ .
+

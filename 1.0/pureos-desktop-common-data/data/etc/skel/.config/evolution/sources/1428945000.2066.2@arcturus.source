@@ -1,0 +1,47 @@
+[Data Source]
+DisplayName=casey.parker@puri.sm
+Enabled=true
+Parent=
+
+[Offline]
+StaySynchronized=true
+
+[Refresh]
+Enabled=true
+IntervalMinutes=60
+
+[Authentication]
+Host=mail.puri.sm
+Method=none
+Port=993
+RememberPassword=true
+User=casey.parker@puri.sm
+
+[Mail Account]
+BackendName=imapx
+IdentityUid=1428945000.2066.0@arcturus
+
+[Security]
+Method=ssl-on-alternate-port
+
+[Imapx Backend]
+FilterInbox=true
+BatchFetchCount=500
+CheckAll=false
+CheckSubscribed=false
+FetchOrder=ascending
+FilterAll=false
+FilterJunk=false
+FilterJunkInbox=false
+MobileMode=false
+Namespace=
+RealJunkPath=
+RealTrashPath=
+ShellCommand=ssh -C -l %u %h exec /usr/sbin/imapd
+UseIdle=false
+UseNamespace=false
+UseQresync=false
+UseRealJunkPath=false
+UseRealTrashPath=false
+UseShellCommand=false
+UseSubscriptions=false

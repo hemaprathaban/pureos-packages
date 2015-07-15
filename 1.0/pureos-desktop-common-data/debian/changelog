@@ -1,0 +1,41 @@
+pureos-desktop-common-data (1.0.12) arcturus; urgency=medium
+
+  * Updated gnome configuration files.
+
+ -- Casey Parker <casey.parker@puri.sm>  Wed, 15 Jul 2015 10:28:51 -0700
+
+pureos-desktop-common-data (1.0.6) arcturus; urgency=medium
+
+  * additional configuration.
+
+ -- Casey Parker <casey.parker@puri.sm>  Wed, 15 Jul 2015 10:03:59 -0700
+
+pureos-desktop-common-data (1.0.5) arcturus; urgency=medium
+
+  * Added ek-mukta fonts.
+
+ -- Casey Parker <casey.parker@puri.sm>  Wed, 15 Jul 2015 10:03:59 -0700
+
+pureos-desktop-common-data (1.0.4) arcturus; urgency=medium
+
+  * Updated source version.
+
+ -- Casey Parker <casey.parker@puri.sm>  Wed, 15 Jul 2015 10:03:59 -0700
+
+pureos-desktop-common-data (1.0.3) arcturus; urgency=medium
+
+  * Updated compatibility version.
+
+ -- Casey Parker <casey.parker@puri.sm>  Wed, 15 Jul 2015 10:03:59 -0700
+
+pureos-desktop-common-data (1.0.2) arcturus; urgency=medium
+
+  * Adapted to PureOS.
+
+ -- Casey Parker <casey.parker@puri.sm>  Wed, 15 Jul 2015 10:03:59 -0700
+
+pureos-desktop-common-data (1.0.1) arcturus; urgency=medium
+
+  * Initial release.
+
+ -- Casey Parker <casey.parker@puri.sm>  Wed, 15 Jul 2015 10:03:58 -0700

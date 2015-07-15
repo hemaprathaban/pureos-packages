@@ -1,0 +1,7 @@
+[Data Source]
+DisplayName=GPG
+Enabled=true
+Parent=
+
+[Mail Signature]
+MimeType=text/plain

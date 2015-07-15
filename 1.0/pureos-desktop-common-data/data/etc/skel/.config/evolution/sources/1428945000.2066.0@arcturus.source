@@ -1,0 +1,41 @@
+[Data Source]
+DisplayName=casey.parker@puri.sm
+Enabled=true
+Parent=1428945000.2066.2@arcturus
+
+[Mail Composition]
+Bcc=
+Cc=
+DraftsFolder=folder://local/Drafts
+SignImip=false
+TemplatesFolder=folder://local/Templates
+
+[Mail Identity]
+Address=casey.parker@puri.sm
+Name=Casey Parker
+Organization=Purism
+ReplyTo=casey.parker@puri.sm
+SignatureUid=1429142044.20880.0@arcturus
+
+[Mail Submission]
+SentFolder=folder://local/Sent
+TransportUid=1428945000.2066.10@arcturus
+RepliesToOriginFolder=false
+
+[Pretty Good Privacy (OpenPGP)]
+AlwaysTrust=true
+EncryptToSelf=false
+KeyId=0xE411FE937779C3AF
+SigningAlgorithm=sha512
+SignByDefault=true
+
+[Message Disposition Notifications]
+ResponsePolicy=ask
+
+[Secure MIME (S/MIME)]
+EncryptionCertificate=
+EncryptByDefault=false
+EncryptToSelf=true
+SigningAlgorithm=sha512
+SigningCertificate=
+SignByDefault=false

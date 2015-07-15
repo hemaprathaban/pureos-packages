@@ -1,0 +1,17 @@
+[Data Source]
+DisplayName=casey.parker@puri.sm
+Enabled=true
+Parent=1428945000.2066.2@arcturus
+
+[Mail Transport]
+BackendName=smtp
+
+[Authentication]
+Host=mail.puri.sm
+Method=LOGIN
+Port=465
+RememberPassword=true
+User=casey.parker@puri.sm
+
+[Security]
+Method=ssl-on-alternate-port

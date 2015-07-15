@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xbel version="1.0"
+      xmlns:bookmark="http://www.freedesktop.org/standards/desktop-bookmarks"
+      xmlns:mime="http://www.freedesktop.org/standards/shared-mime-info"
+>
+  <bookmark href="file:///home/casey/Documents/purism-packages/1.0/DATA/firefox/browser/branding" added="2015-06-26T22:05:51Z" modified="2015-06-26T22:05:51Z" visited="2015-06-26T22:05:51.592295Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <bookmark:applications>
+          <bookmark:application name="gThumb" exec="&apos;gthumb %u&apos;" modified="2015-06-26T22:05:51Z" count="1"/>
+        </bookmark:applications>
+        <bookmark:private/>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/casey/Documents/purism-packages/1.0/PACKAGES/ubiquity/ubiquity-2.18.8.8+7.0pureos8+1.0pureos1+1.0pureos1/data/icons/128x128/apps" added="2015-06-26T22:05:51Z" modified="2015-06-26T22:05:51Z" visited="2015-06-26T22:05:51.592307Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <bookmark:applications>
+          <bookmark:application name="gThumb" exec="&apos;gthumb %u&apos;" modified="2015-06-26T22:05:51Z" count="1"/>
+        </bookmark:applications>
+        <bookmark:private/>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/casey/.cache/evolution/tmp/evolution-casey-TmsMV4" added="2015-06-26T22:05:51Z" modified="2015-06-26T22:05:51Z" visited="2015-06-26T22:05:51.592317Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <bookmark:applications>
+          <bookmark:application name="gThumb" exec="&apos;gthumb %u&apos;" modified="2015-06-26T22:05:51Z" count="1"/>
+        </bookmark:applications>
+        <bookmark:private/>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/casey/.cache/evolution/tmp/evolution-casey-dwSWSy" added="2015-06-26T22:05:51Z" modified="2015-06-26T22:05:51Z" visited="2015-06-26T22:05:51.592325Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <bookmark:applications>
+          <bookmark:application name="gThumb" exec="&apos;gthumb %u&apos;" modified="2015-06-26T22:05:51Z" count="1"/>
+        </bookmark:applications>
+        <bookmark:private/>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/casey/.cache/evolution/tmp/evolution-casey-dIoJMn" added="2015-06-26T22:05:51Z" modified="2015-06-26T22:05:51Z" visited="2015-06-26T22:05:51.592332Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <bookmark:applications>
+          <bookmark:application name="gThumb" exec="&apos;gthumb %u&apos;" modified="2015-06-26T22:05:51Z" count="1"/>
+        </bookmark:applications>
+        <bookmark:private/>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///media/casey/a7e08d40-57bd-4743-92f2-d9eeb6b78801/purism-packages/1.0/PACKAGES/cinnamon/cinnamon-2.4.8/data/theme" added="2015-06-26T22:05:51Z" modified="2015-06-26T22:05:51Z" visited="2015-06-26T22:05:51.592339Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <bookmark:applications>
+          <bookmark:application name="gThumb" exec="&apos;gthumb %u&apos;" modified="2015-06-26T22:05:51Z" count="1"/>
+        </bookmark:applications>
+        <bookmark:private/>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///media/casey/a7e08d40-57bd-4743-92f2-d9eeb6b78801/purism-packages/1.0/PACKAGES/cinnamon-themes/cinnamon-themes-2014.11.18.1+1.0pureos1/usr/share/themes/Linux%20Mint/cinnamon" added="2015-06-26T22:05:51Z" modified="2015-06-26T22:05:51Z" visited="2015-06-26T22:05:51.592348Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <bookmark:applications>
+          <bookmark:application name="gThumb" exec="&apos;gthumb %u&apos;" modified="2015-06-26T22:05:51Z" count="1"/>
+        </bookmark:applications>
+        <bookmark:private/>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///media/casey/a7e08d40-57bd-4743-92f2-d9eeb6b78801/purism-packages/1.0/PACKAGES/cinnamon-themes/cinnamon-themes-2014.11.18.1+1.0pureos1/usr/share/themes/Mint-X/cinnamon" added="2015-06-26T22:05:51Z" modified="2015-06-26T22:05:51Z" visited="2015-06-26T22:05:51.592358Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <bookmark:applications>
+          <bookmark:application name="gThumb" exec="&apos;gthumb %u&apos;" modified="2015-06-26T22:05:51Z" count="1"/>
+        </bookmark:applications>
+        <bookmark:private/>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///media/casey/a7e08d40-57bd-4743-92f2-d9eeb6b78801/1.0/PACKAGES/grub2/grub2-2.02~beta2-9ubuntu1+7.0pureos5/themes/starfield" added="2015-06-26T22:05:51Z" modified="2015-06-26T22:05:51Z" visited="2015-06-26T22:05:51.592367Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <bookmark:applications>
+          <bookmark:application name="gThumb" exec="&apos;gthumb %u&apos;" modified="2015-06-26T22:05:51Z" count="1"/>
+        </bookmark:applications>
+        <bookmark:private/>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///media/casey/a7e08d40-57bd-4743-92f2-d9eeb6b78801/1.0/PACKAGES/gfxboot-theme-pureos/gfxboot-theme-pureos-0.16.1" added="2015-06-26T22:05:51Z" modified="2015-06-26T22:05:51Z" visited="2015-06-26T22:05:51.592375Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <bookmark:applications>
+          <bookmark:application name="gThumb" exec="&apos;gthumb %u&apos;" modified="2015-06-26T22:05:51Z" count="1"/>
+        </bookmark:applications>
+        <bookmark:private/>
+      </metadata>
+    </info>
+  </bookmark>
+</xbel>
