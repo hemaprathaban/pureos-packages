@@ -7,9 +7,9 @@ f=/usr/share/desktop-base/grub_background.sh
 if test -e ${f} ; then
   source ${f}
 else
-  WALLPAPER="/usr/share/backgrounds/arcturus.png"
-  if test -f /usr/share/backgrounds/pureos-grub-custom.png ; then
-  WALLPAPER="/usr/share/backgrounds/pureos-grub-custom.png"
+  WALLPAPER="/usr/share/backgrounds/pureos-grub.png"
+  if test -f /usr/share/backgrounds/grub-custom.png ; then
+  WALLPAPER="/usr/share/backgrounds/grub-custom.png"
   fi
   COLOR_NORMAL="black/white"
   COLOR_HIGHLIGHT="white/white"
