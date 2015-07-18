@@ -1,3 +1,10 @@
+pureos-base-data (1.1.11) arcturus; urgency=medium
+
+  * Removed leftover upstream config file (#59)
+  * Added option nomodeset (#61)
+
+ -- Casey Parker <casey.parker@puri.sm>  Sat, 18 Jul 2015 12:22:27 -0700
+
 pureos-base-data (1.1.10) arcturus; urgency=medium
 
   * Added pureos-grub boot image. 
