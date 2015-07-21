@@ -7,7 +7,7 @@ p2
 I00
 sS'latest_version'
 p3
-S'4.5'
+S'4.5.3'
 p4
 sS'installed_version'
 p5
@@ -21,12 +21,12 @@ S'https://dist.torproject.org/'
 p8
 sS'tbl_version'
 p9
-S'0.1.9'
+S'0.2.0.1'
 p10
 sS'update_over_tor'
 p11
 I01
 sS'last_update_check_timestamp'
 p12
-I1430627514
+I1437417996
 s.

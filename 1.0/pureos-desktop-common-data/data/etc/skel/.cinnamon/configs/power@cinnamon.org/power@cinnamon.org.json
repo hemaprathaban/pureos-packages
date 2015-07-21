@@ -1,0 +1,9 @@
+{
+    "showpercentage": {
+        "type": "checkbox",
+        "description": "Show percentage",
+        "default": true,
+        "value": true
+    },
+    "__md5__": "7cad34a8441f32d951e6b557966cf6ec"
+}

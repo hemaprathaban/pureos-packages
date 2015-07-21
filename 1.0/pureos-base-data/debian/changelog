@@ -1,3 +1,9 @@
+pureos-base-data (1.1.12) arcturus; urgency=medium
+
+  * separated more of the desktop config files out 
+
+ -- Casey Parker <casey.parker@puri.sm>  Sun, 19 Jul 2015 14:34:52 -0700
+
 pureos-base-data (1.1.11) arcturus; urgency=medium
 
   * Added option nomodeset (#61)

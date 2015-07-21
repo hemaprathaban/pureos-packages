@@ -1,3 +1,9 @@
+pureos-desktop-common-data (1.0.12-3) arcturus; urgency=medium
+
+  * updated cinnamon configuration files 
+
+ -- Casey Parker <casey.parker@puri.sm>  Sun, 19 Jul 2015 14:18:55 -0700
+
 pureos-desktop-common-data (1.0.12-1) arcturus; urgency=medium
 
   * Updated gnome configuration files.

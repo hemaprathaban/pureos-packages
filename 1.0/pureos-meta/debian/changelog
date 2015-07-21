@@ -1,3 +1,15 @@
+pureos-meta (1.1.23-1) arcturus; urgency=medium
+
+  * Added torbrowser-launcher to pureos-desktop-common-data 
+
+ -- Casey Parker <casey.parker@puri.sm>  Sun, 19 Jul 2015 22:43:04 -0700
+
+pureos-meta (1.1.23) arcturus; urgency=medium
+
+  * pureos-cinnamon and pureos-gnome now replace pureos 
+
+ -- Casey Parker <casey.parker@puri.sm>  Sun, 19 Jul 2015 12:19:40 -0700
+
 pureos-meta (1.1.22) arcturus; urgency=medium
 
   * Removed gnome-orca from pureos-recommended depends 
