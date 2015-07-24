@@ -1,5 +1,7 @@
-pureos-meta (1.1.23-1) arcturus; urgency=medium
+pureos-meta (1.1.24-1) arcturus; urgency=medium
 
+  * Added depends on puresources package
+  * Gracefulness improvements with Trisquel
   * Added torbrowser-launcher to pureos-desktop-common-data 
 
  -- Casey Parker <casey.parker@puri.sm>  Sun, 19 Jul 2015 22:43:04 -0700

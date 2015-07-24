@@ -1,0 +1,3 @@
+#!/bin/bash
+
+xgettext --language=Python --keyword=_ --output=puresources.pot usr/lib/pureos/pureSources/pureSources.py usr/lib/pureos/pureSources/ppa_browser.py usr/lib/pureos/pureSources/foreign_packages.py usr/bin/software-sources usr/bin/add-apt-repository generate_desktop_files

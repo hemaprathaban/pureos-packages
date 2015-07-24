@@ -1,0 +1,5 @@
+#!/bin/bash
+
+sudo rm -rf /usr/lib/pureos/pureSources
+sudo cp -R usr /
+puresources

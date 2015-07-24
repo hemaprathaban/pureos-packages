@@ -1,0 +1,5 @@
+deb http://archive.puri.sm $codename main
+
+deb $basemirror $basecodename main
+deb $basemirror $basecodename-updates main
+deb $basemirror $basecodename-security main
