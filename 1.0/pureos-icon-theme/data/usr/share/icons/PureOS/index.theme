@@ -1,0 +1,35 @@
+[Icon Theme]
+Name=PureOS
+Comment=PureOS icon theme.
+Inherits=oxygen,gnome-brave
+Example=folder
+
+Directories=scalable/apps,scalable/devices,scalable/places,scalable/animations
+
+[scalable/apps]
+Size=48
+Type=Scalable
+MinSize=1
+MaxSize=256
+Context=Applications
+
+[scalable/places]
+Size=48
+MinSize=1
+MaxSize=256
+Context=Places
+Type=Scalable
+
+[scalable/devices]
+Size=48
+MinSize=1
+MaxSize=256
+Context=Devices
+Type=Scalable
+
+[scalable/animations]
+Size=48
+MinSize=1
+MaxSize=256
+Context=Animations
+Type=Scalable

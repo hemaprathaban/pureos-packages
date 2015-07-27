@@ -1,3 +1,10 @@
+pureos-icon-theme (1.0.14) arcturus; urgency=medium
+
+  * ubiquity icon fixed.
+  * lightdm-gtk-greeter icons fixed. 
+
+ -- Casey Parker <casey.parker@puri.sm>  Mon, 27 Jul 2015 09:51:39 -0700
+
 pureos-icon-theme (1.0.13) arcturus; urgency=medium
 
   * Updated for cinnamon menu.
