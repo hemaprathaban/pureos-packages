@@ -1,4 +1,4 @@
-puresources (1.0.0.1) UNRELEASED; urgency=medium
+puresources (1.0.0.1) arcturus; urgency=medium
 
   * Fixed an issue wherein PureOS mirrors displayed Trisquel names  
   * Fixed reporting of codenames for adding PPAs 
