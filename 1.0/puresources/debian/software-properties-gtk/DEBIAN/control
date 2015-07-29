@@ -1,0 +1,11 @@
+Package: software-properties-gtk
+Source: puresources
+Version: 1.0.0.1
+Architecture: all
+Maintainer: Casey Parker <casey.parker@puri.sm>
+Installed-Size: 26
+Depends: puresources
+Section: admin
+Priority: optional
+Description: Transitional package
+ This package is obsolete and replaced with puresources.

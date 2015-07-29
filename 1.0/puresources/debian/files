@@ -1,0 +1,6 @@
+puresources_1.0.0.1_all.deb admin optional
+software-properties-common_1.0.0.1_all.deb admin optional
+software-properties-gtk_1.0.0.1_all.deb admin optional
+software-properties-kde_1.0.0.1_all.deb admin optional
+python-software-properties_1.0.0.1_all.deb admin optional
+python3-software-properties_1.0.0.1_all.deb admin optional

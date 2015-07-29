@@ -1,0 +1,12 @@
+Package: puresources
+Version: 1.0.0.1
+Architecture: all
+Essential: yes
+Maintainer: Casey Parker <casey.parker@puri.sm>
+Installed-Size: 774
+Depends: python (>= 2.4), python (<< 3), python-gtk2, python-glade2, python-pycurl, synaptic, dash
+Replaces: python-software-properties (<< 1), python3-software-properties (<< 1), software-properties-common (<< 1), software-properties-gtk (<< 1), software-properties-kde (<< 1)
+Section: admin
+Priority: optional
+Description: Software Sources configuration tool
+ Configure the sources for installable software and updates.

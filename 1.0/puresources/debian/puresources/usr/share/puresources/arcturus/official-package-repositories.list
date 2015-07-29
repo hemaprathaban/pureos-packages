@@ -1,0 +1,7 @@
+deb http://archive.puri.sm $codename main
+
+deb http://linux-libre.fsfla.org/pub/linux-libre/freesh freesh main
+
+deb $basemirror $basecodename main
+deb $basemirror $basecodename-updates main
+deb $basemirror $basecodename-security main

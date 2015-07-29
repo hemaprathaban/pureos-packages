@@ -59,9 +59,7 @@ msgstr ""
 
 #: usr/lib/pureos/pureSources/pureSources.py:304
 msgid ""
-"PureOS uses Astathis to publish packages which are being tested. "
-"Unless you are participating in beta-testing, you should not enable this "
-"repository. Are you sure you want to enable Astathis?"
+"Astathis"
 msgstr ""
 
 #: usr/lib/pureos/pureSources/pureSources.py:310
