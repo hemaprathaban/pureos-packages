@@ -4,10 +4,10 @@ import os, sys
 import gettext
 from optparse import OptionParser
 
-gettext.install("mintsources", "/usr/share/linuxmint/locale")
+gettext.install("puresources", "/usr/share/pureos/locale")
 
 if os.geteuid() != 0:
-    print(_("Error: must run as root"))
+    print(_("You must be root."))
     sys.exit(1)
 
 usage = "usage: %prog [options] repository"
@@ -21,10 +21,10 @@ if (len(args) == 0):
     print(_("Error: need a repository as argument"))
     sys.exit(1)
 
-# Call mintSources script with exec instead of system so that the exit status
+# Call pureSources script with exec instead of system so that the exit status
 # is returned to the caller
-mintsources = "/usr/lib/linuxmint/mintSources/mintSources.py"
+puresources = "/usr/lib/pureos/pureSources/pureSources.py"
 if options.forceYes:
-	os.execl(mintsources, mintsources, "add-apt-repository", "-y", args[0])
+	os.execl(puresources, puresources, "add-apt-repository", "-y", args[0])
 else:
-	os.execl(mintsources, mintsources, "add-apt-repository", args[0])
+	os.execl(puresources, puresources, "add-apt-repository", args[0])

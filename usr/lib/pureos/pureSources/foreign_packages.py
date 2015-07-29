@@ -10,7 +10,7 @@ from subprocess import Popen, PIPE
 import subprocess
 import vte
 
-gettext.install("mintsources", "/usr/share/linuxmint/locale")
+gettext.install("puresources", "/usr/share/pureos/locale")
 
 class Foreign_Browser():
 
@@ -23,13 +23,13 @@ class Foreign_Browser():
 
         self.foreign_packages = []
 
-        glade_file = "/usr/lib/linuxmint/mintSources/mintSources.glade"
+        glade_file = "/usr/lib/pureos/pureSources/pureSources.glade"
 
         self.builder = gtk.Builder()
         self.builder.add_from_file(glade_file)
 
         self.window = self.builder.get_object("foreign_window")
-        self.window.set_title(_("Foreign packages"))
+        self.window.set_title(_("Foreign Packages"))
         self.window.set_icon_from_file("/usr/share/icons/hicolor/scalable/apps/software-sources.svg")
         self.window.connect("destroy", gtk.main_quit)
         self.builder.get_object("button_foreign_cancel").connect("clicked", gtk.main_quit)

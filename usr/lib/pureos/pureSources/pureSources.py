@@ -64,7 +64,7 @@ def add_repository_via_cli(line, codename, forceYes, use_ppas):
 
         # Add the key
         short_key = ppa_info["signing_key_fingerprint"][-8:]
-        os.system("apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys %s" % short_key)
+        os.system("apt-key adv --keyserver hkp://pool.sks-keysevers.net --recv-keys %s" % short_key)
 
         # Add the PPA in sources.list.d
         with open(file, "w") as text_file:
@@ -75,7 +75,7 @@ def add_repository_via_cli(line, codename, forceYes, use_ppas):
             text_file.write("%s\n" % expand_http_line(line, codename))
 
 def get_ppa_info_from_lp(owner_name, ppa_name):
-    DEFAULT_KEYSERVER = "hkp://keyserver.ubuntu.com:80/"
+    DEFAULT_KEYSERVER = "hkp://pool.sks-keyservers.net/"
     # maintained until 2015
     LAUNCHPAD_PPA_API = 'https://launchpad.net/api/1.0/~%s/+archive/%s'
     # Specify to use the system default SSL store; change to a different path
@@ -165,7 +165,7 @@ class PPAException(Exception):
     def __str__(self):
         return repr(self.value)
 
-gettext.install("mintsources", "/usr/share/linuxmint/locale")
+gettext.install("puresources", "/usr/share/pureos/locale")
 
 SPEED_PIX_WIDTH = 125
 SPEED_PIX_HEIGHT = 16
@@ -206,7 +206,6 @@ class Repository():
 
     def switch(self):
         self.selected = (not self.selected)
-        
         readfile = open(self.file, "r")
         content = readfile.read()
         readfile.close()
@@ -276,7 +275,7 @@ class Repository():
                                 else:
                                     name = subparts[-3].capitalize()
                             break
-                name = name.replace("Linuxmint", "Linux Mint")
+#                name = name.replace("Linuxmint", "PureOS")
                 name = name.replace("01", "Intel")
                 name = name.replace("Steampowered", "Steam")
             except:
@@ -299,15 +298,10 @@ class ComponentToggleCheckBox(gtk.CheckButton):
         if not self.application._interface_loaded:
             return
 
-        if widget.get_active() and os.path.exists("/etc/linuxmint/info"):
-            if self.component.name == "romeo":
-                if self.application.show_confirmation_dialog(self.application._main_window, _("Linux Mint uses Romeo to publish packages which are not tested. Once these packages are tested, they are then moved to the official repositories. Unless you are participating in beta-testing, you should not enable this repository. Are you sure you want to enable Romeo?"), yes_no=True):
-                    self.component.selected = widget.get_active()
-                    self.application.apply_official_sources()
-                else:
-                    widget.set_active(not widget.get_active())
-            elif self.component.name == "backport":
-                if self.application.show_confirmation_dialog(self.application._main_window, _("Backports are packages coming from newer Linux Mint releases. When backports are made available, the development team publishes an official announcement on http://blog.linuxmint.com. This announcement might include important information about the new features, design decisions or even known issues which relate to you. It is therefore strongly recommended to not enable backports until you have read this information. Are you sure you want to enable backports?"), yes_no=True):
+        if widget.get_active() and os.path.exists("/etc/pureos/info"):
+            widget.set_active(not widget.get_active())
+            if self.component.name == "backport":
+                if self.application.show_confirmation_dialog(self.application._main_window, _("Backports are from newer PureOS releases. Are you sure you want to enable backports?"), yes_no=True):
                     self.component.selected = widget.get_active()
                     self.application.apply_official_sources()
                 else:
@@ -420,9 +414,9 @@ class MirrorSelectionDialog(object):
     def _update_list(self):
         self._mirrors_model.clear()
         for mirror in self._mirrors:
-            flag = "/usr/lib/linuxmint/mintSources/flags/generic.png"
-            if os.path.exists("/usr/lib/linuxmint/mintSources/flags/%s.png" % mirror.country_code.lower()):
-                flag = "/usr/lib/linuxmint/mintSources/flags/%s.png" % mirror.country_code.lower()            
+            flag = "/usr/lib/pureos/pureSources/flags/generic.png"
+            if os.path.exists("/usr/lib/pureos/pureSources/flags/%s.png" % mirror.country_code.lower()):
+                flag = "/usr/lib/pureos/pureSources/flags/%s.png" % mirror.country_code.lower()            
             self._mirrors_model.append((
                 mirror,
                 mirror.url,
@@ -489,26 +483,10 @@ class MirrorSelectionDialog(object):
             print "Error '%s' on url %s" % (errstr, url)
             download_speed = 0
             if errno == 28:
-                # TIMEOUT - but since we're not launching all tests in one go, it doesn't necessarilly mean the server is timeout, maybe we're out of sockets on the client side, so let's retry
+                # TIMEOUT 
                 if (depth < 3):                    
                     self._speed_test(model, iter, depth+1)
                     return
-                # else:
-                #     # Too many timeouts, removing the mirror..
-                #     self._speed_test_lock.acquire()
-                #     if iter is not None:
-                #         model.remove(iter)
-                #     self._speed_test_lock.release()
-                # return
-            # else:                
-            #     # Dodgy mirror, removing it...
-            #     try:
-            #         self._speed_test_lock.acquire()
-            #         # if iter is not None:
-            #         #     model.remove(iter)
-            #         self._speed_test_lock.release()
-            #     except Exception, detail:
-            #         print detail                
 
         if thread.get_ident() in self._meaningful_speed_threads:  #otherwise, thread is "expired"
             model.set_value(iter, MirrorSelectionDialog.MIRROR_SPEED_COLUMN, download_speed)
@@ -544,7 +522,7 @@ class Application(object):
 
         self.lsb_codename = commands.getoutput("lsb_release -sc")        
 
-        glade_file = "/usr/lib/linuxmint/mintSources/mintSources.glade"        
+        glade_file = "/usr/lib/pureos/pureSources/pureSources.glade"        
             
         self.builder = gtk.Builder()
         self.builder.add_from_file(glade_file)
@@ -558,7 +536,7 @@ class Application(object):
         self._official_repositories_box = self.builder.get_object("official_repositories_box")        
             
         config_parser = ConfigParser.RawConfigParser()
-        config_parser.read("/usr/share/mintsources/%s/mintsources.conf" % self.lsb_codename)
+        config_parser.read("/usr/share/puresources/%s/puresources.conf" % self.lsb_codename)
         self.config = {}
         self.optional_components = []
         self.system_keys = []
@@ -566,10 +544,6 @@ class Application(object):
             if section.startswith("optional_component"):
                 component_name = config_parser.get(section, "name")
                 component_description = config_parser.get(section, "description")
-                if component_name in ["backport", "backports"]:
-                    component_description = "%s (%s)" % (_("Backported packages"), component_name)
-                elif component_name in ["romeo", "unstable"]:
-                    component_description = "%s (%s)" % (_("Unstable packages"), component_name)
                 component = Component(component_name, component_description, False)
                 self.optional_components.append(component)
             elif section.startswith("key"):
@@ -591,8 +565,8 @@ class Application(object):
         self.builder.get_object("label_title_maintenance").set_markup("%s" % _("Maintenance"))
 
         self.builder.get_object("label_mirrors").set_markup("<b>%s</b>" % _("Mirrors"))
-        self.builder.get_object("label_mirror_description").set_markup("%s (%s)" % (_("Main"), self.config["general"]["codename"]) )
-        self.builder.get_object("label_base_mirror_description").set_markup("%s (%s)" % (_("Base"), self.config["general"]["base_codename"]) )
+        self.builder.get_object("label_mirror_description").set_markup("%s (%s)" % (_("PureOS"), self.config["general"]["codename"]) )
+        self.builder.get_object("label_base_mirror_description").set_markup("%s (%s)" % (_("Trisquel Base"), self.config["general"]["base_codename"]) )
         self.builder.get_object("button_mirror").set_tooltip_text(_("Select a faster server..."))
         self.builder.get_object("button_base_mirror").set_tooltip_text(_("Select a faster server..."))
 
@@ -623,7 +597,7 @@ class Application(object):
         self.builder.get_object("button_downgrade_foreign").set_tooltip_text("%s" % _("Packages which version does not come from known repositories are listed here and can be downgraded."))
 
         self.builder.get_object("label_description").set_markup("<b>%s</b>" % self.config["general"]["description"])
-        self.builder.get_object("image_icon").set_from_file("/usr/share/mintsources/%s/icon.png" % self.lsb_codename)
+        self.builder.get_object("image_icon").set_from_file("/usr/share/puresources/%s/icon.png" % self.lsb_codename)
 
         self.builder.get_object("source_code_cb").set_label(_("Enable source code repositories"))
 
@@ -631,8 +605,7 @@ class Application(object):
 
         self.selected_components = []
         if (len(self.optional_components) > 0):
-            if os.path.exists("/etc/linuxmint/info"):
-                # This is Mint, we want to warn people about Romeo/Backport
+            if os.path.exists("/etc/pureos/info"):
                 warning_label = gtk.Label()
                 warning_label.set_alignment(0, 0.5)
                 warning_label.set_markup("<span font_style='oblique' font_stretch='ultracondensed' foreground='#3c3c3c'>%s</span>" % _("Warning: Backports and unstable packages can introduce regressions and negatively impact your system. Please do not enable these options in Linux Mint unless it was suggested by the development team."))                
@@ -825,21 +798,21 @@ class Application(object):
         return mirror_list
 
     def remove_foreign(self, widget):
-        os.system("/usr/lib/linuxmint/mintSources/foreign_packages.py remove %s" % self._main_window.window.xid)
+        os.system("/usr/lib/pureos/pureSources/foreign_packages.py remove %s" % self._main_window.window.xid)
 
     def downgrade_foreign(self, widget):
-        os.system("/usr/lib/linuxmint/mintSources/foreign_packages.py downgrade %s" % self._main_window.window.xid)
+        os.system("/usr/lib/pureos/pureSources/foreign_packages.py downgrade %s" % self._main_window.window.xid)
 
     def fix_purge(self, widget):
         os.system("aptitude purge ~c -y")
         image = gtk.Image()
-        image.set_from_file("/usr/lib/linuxmint/mintSources/maintenance.png")
+        image.set_from_file("/usr/lib/pureos/pureSources/maintenance.png")
         self.show_confirmation_dialog(self._main_window, _("There is no more residual configuration on the system."), image, affirmation=True)
 
     def fix_mergelist(self, widget):
         os.system("rm /var/lib/apt/lists/* -vf")
         image = gtk.Image()
-        image.set_from_file("/usr/lib/linuxmint/mintSources/maintenance.png")
+        image.set_from_file("/usr/lib/pureos/pureSources/maintenance.png")
         self.show_confirmation_dialog(self._main_window, _("The problem was fixed. Please reload the cache."), image, affirmation=True)
         self.enable_reload_button()
 
@@ -881,10 +854,10 @@ class Application(object):
 
     def fetch_key(self, widget):
         image = gtk.Image()
-        image.set_from_file("/usr/lib/linuxmint/mintSources/keyring.png")
-        line = self.show_entry_dialog(self._main_window, _("Please enter the 8 characters of the public key you want to download from keyserver.ubuntu.com:"), "", image)
+        image.set_from_file("/usr/lib/pureos/pureSources/keyring.png")
+        line = self.show_entry_dialog(self._main_window, _("Please enter the trailing 8 characters of the public key you want to download from pool.sks-keyservers.net:"), "", image)
         if line is not None:
-            res = os.system("apt-key adv --keyserver keyserver.ubuntu.com --recv-keys %s" % line)            
+            res = os.system("apt-key adv --keyserver pool.sks-keyservers.net --recv-keys %s" % line)            
             self.load_keys()
             self.enable_reload_button()
 
@@ -894,14 +867,14 @@ class Application(object):
         if (iter != None):            
             key = model.get(iter, 0)[0]
             image = gtk.Image()
-            image.set_from_file("/usr/lib/linuxmint/mintSources/keyring.png")
+            image.set_from_file("/usr/lib/pureos/pureSources/keyring.png")
             if (self.show_confirmation_dialog(self._main_window, _("Are you sure you want to permanently remove this key?"), image, yes_no=True)):                
                 key.delete()
                 self.load_keys()                
 
     def add_ppa(self, widget):
         image = gtk.Image()
-        image.set_from_file("/usr/lib/linuxmint/mintSources/ppa.png")
+        image.set_from_file("/usr/lib/pureos/pureSources/ppa.png")
         start_line = ""
         clipboard_text = self.get_clipboard_text("ppa")
         if clipboard_text != None:
@@ -920,18 +893,19 @@ class Application(object):
                 return
         
             image = gtk.Image()
-            image.set_from_file("/usr/lib/linuxmint/mintSources/ppa.png")
+            image.set_from_file("/usr/lib/pureos/pureSources/ppa.png")
             description = ""
             if ppa_info["description"] is not None:
                 description = ppa_info["description"].encode("utf-8")
                 description = description.replace("<", "&lt;").replace(">", "&gt;")
             if self.show_confirm_ppa_dialog(self._main_window, "%s\n\n%s\n\n%s" % (line, description, str(ppa_info["web_link"]))):                                
-                (deb_line, file) = expand_ppa_line(line.strip(), self.config["general"]["base_codename"])
-                deb_line = expand_http_line(deb_line, self.config["general"]["base_codename"])
+                (deb_line, file) = expand_ppa_line(line.strip(), self.config["general"]["ubu_codename"])
+                deb_line = expand_http_line(deb_line, self.config["general"]["ubu_codename"])
                 debsrc_line = 'deb-src' + deb_line[3:]
                 
                 # Add the key
                 short_key = ppa_info["signing_key_fingerprint"][-8:]
+                # This will remain keyserver.ubuntu.com for the sake of ppas.
                 os.system("apt-key adv --keyserver keyserver.ubuntu.com --recv-keys %s" % short_key)
                 self.load_keys()
 
@@ -951,8 +925,6 @@ class Application(object):
                 tree_iter = self._ppa_model.append((repository, repository.selected, repository.get_ppa_name()))                        
 
                 self.enable_reload_button()
-
-                                          
                 
 
     def edit_ppa(self, widget):        
@@ -1003,10 +975,11 @@ class Application(object):
                         line = line[:-7]
                         ppa_owner, ppa_name = line.split("/")
                         architecture = commands.getoutput("dpkg --print-architecture")
-                        codename = commands.getoutput("lsb_release -u -c -s")
+                        #codename = commands.getoutput("lsb_release -u -c -s")
+                        codename = "trusty"
                         ppa_file = "/var/lib/apt/lists/ppa.launchpad.net_%s_%s_ubuntu_dists_%s_main_binary-%s_Packages" % (ppa_owner, ppa_name, codename, architecture)
                         if os.path.exists(ppa_file):
-                            os.system("/usr/lib/linuxmint/mintSources/ppa_browser.py %s %s %s" % (ppa_owner, ppa_name, self._main_window.window.xid))
+                            os.system("/usr/lib/pureos/pureSources/ppa_browser.py %s %s %s" % (ppa_owner, ppa_name, self._main_window.window.xid))
                         else:
                             print "%s not found!" % ppa_file
                             self.show_error_dialog(self._main_window, _("The content of this PPA is not available. Please refresh the cache and try again."))
@@ -1015,13 +988,13 @@ class Application(object):
 
     def add_repository(self, widget):
         image = gtk.Image()
-        image.set_from_file("/usr/lib/linuxmint/mintSources/3rd.png")
+        image.set_from_file("/usr/lib/pureos/pureSources/3rd.png")
         start_line = ""
         clipboard_text = self.get_clipboard_text("deb")
         if clipboard_text != None:
             start_line = clipboard_text
         else:
-            start_line = "deb http://packages.domain.com/ %s main" % self.config["general"]["base_codename"]
+            start_line = "deb http://packages.domain.com/ %s main" % self.config["general"]["ubu_codename"]
 
         line = self.show_entry_dialog(self._main_window, _("Please enter the name of the repository you want to add:"), start_line, image)
         if line is not None and line.strip().startswith("deb"):
@@ -1036,7 +1009,6 @@ class Application(object):
 
             self.enable_reload_button()
                 
-
     def edit_repository(self, widget):        
         selection = self._repository_treeview.get_selection()
         (model, iter) = selection.get_selected()
@@ -1057,7 +1029,6 @@ class Application(object):
                 repository.delete()
                 self.repositories.remove(repository)
             
-
     def show_confirmation_dialog(self, parent, message, image=None, affirmation=None, yes_no=False):
         buttons = gtk.BUTTONS_OK_CANCEL
         default_button = gtk.RESPONSE_OK
@@ -1262,7 +1233,7 @@ class Application(object):
 
         # Update official packages repositories
         os.system("rm -f /etc/apt/sources.list.d/official-package-repositories.list")                
-        template = open('/usr/share/mintsources/%s/official-package-repositories.list' % self.lsb_codename, 'r').read()
+        template = open('/usr/share/puresources/%s/official-package-repositories.list' % self.lsb_codename, 'r').read()
         template = template.replace("$codename", self.config["general"]["codename"])
         template = template.replace("$basecodename", self.config["general"]["base_codename"])
         template = template.replace("$optionalcomponents", ' '.join(selected_components))  
@@ -1275,7 +1246,7 @@ class Application(object):
         # Update official sources repositories
         os.system("rm -f /etc/apt/sources.list.d/official-source-repositories.list")
         if (self.builder.get_object("source_code_cb").get_active()):
-            template = open('/usr/share/mintsources/%s/official-source-repositories.list' % self.lsb_codename, 'r').read()
+            template = open('/usr/share/puresources/%s/official-source-repositories.list' % self.lsb_codename, 'r').read()
             template = template.replace("$codename", self.config["general"]["codename"])
             template = template.replace("$basecodename", self.config["general"]["base_codename"])
             template = template.replace("$optionalcomponents", ' '.join(selected_components))
@@ -1290,7 +1261,7 @@ class Application(object):
         os.system("rm -f /etc/apt/sources.list.d/official-package-repositories.list")                
         os.system("rm -f /etc/apt/sources.list.d/official-source-repositories.list")
         
-        template = open('/usr/share/mintsources/%s/official-package-repositories.list' % self.lsb_codename, 'r').read()
+        template = open('/usr/share/puresources/%s/official-package-repositories.list' % self.lsb_codename, 'r').read()
         template = template.replace("$codename", self.config["general"]["codename"])
         template = template.replace("$basecodename", self.config["general"]["base_codename"])
         template = template.replace("$optionalcomponents", '')  
@@ -1331,8 +1302,8 @@ class Application(object):
         self.update_flags()
     
     def update_flags(self):
-        self.builder.get_object("image_mirror").set_from_file("/usr/lib/linuxmint/mintSources/flags/generic.png") 
-        self.builder.get_object("image_base_mirror").set_from_file("/usr/lib/linuxmint/mintSources/flags/generic.png") 
+        self.builder.get_object("image_mirror").set_from_file("/usr/lib/pureos/pureSources/flags/generic.png") 
+        self.builder.get_object("image_base_mirror").set_from_file("/usr/lib/pureos/pureSources/flags/generic.png") 
 
         selected_mirror = self.selected_mirror
         if selected_mirror[-1] == "/":
@@ -1348,8 +1319,8 @@ class Application(object):
             else:
                 url = mirror.url
             if url in selected_mirror:
-                if os.path.exists("/usr/lib/linuxmint/mintSources/flags/%s.png" % mirror.country_code.lower()):
-                    self.builder.get_object("image_mirror").set_from_file("/usr/lib/linuxmint/mintSources/flags/%s.png" % mirror.country_code.lower()) 
+                if os.path.exists("/usr/lib/pureos/pureSources/flags/%s.png" % mirror.country_code.lower()):
+                    self.builder.get_object("image_mirror").set_from_file("/usr/lib/pureos/pureSources/flags/%s.png" % mirror.country_code.lower()) 
 
         for mirror in self.base_mirrors:
             if mirror.url[-1] == "/":
@@ -1357,8 +1328,8 @@ class Application(object):
             else:
                 url = mirror.url
             if url in selected_base_mirror:
-                if os.path.exists("/usr/lib/linuxmint/mintSources/flags/%s.png" % mirror.country_code.lower()):
-                    self.builder.get_object("image_base_mirror").set_from_file("/usr/lib/linuxmint/mintSources/flags/%s.png" % mirror.country_code.lower()) 
+                if os.path.exists("/usr/lib/pureos/pureSources/flags/%s.png" % mirror.country_code.lower()):
+                    self.builder.get_object("image_base_mirror").set_from_file("/usr/lib/pureos/pureSources/flags/%s.png" % mirror.country_code.lower()) 
                   
     def get_clipboard_text(self, source_type):
         clipboard = gtk.Clipboard(display=gtk.gdk.display_get_default(), selection="CLIPBOARD")
@@ -1381,10 +1352,10 @@ if __name__ == "__main__":
 
         if len(args) > 1 and (args[0] == "add-apt-repository"):
             ppa_line = args[1]
-            lsb_codename = commands.getoutput("lsb_release -sc")
+            # lsb_codename = commands.getoutput("lsb_release -sc")
             config_parser = ConfigParser.RawConfigParser()
-            config_parser.read("/usr/share/mintsources/%s/mintsources.conf" % lsb_codename)
-            codename = config_parser.get("general", "base_codename")
+            config_parser.read("/usr/share/puresources/%s/puresources.conf" % lsb_codename)
+            codename = config_parser.get("general", "ubu_codename")
             use_ppas = config_parser.get("general", "use_ppas")
             add_repository_via_cli(ppa_line, codename, options.forceYes, use_ppas)
         else:

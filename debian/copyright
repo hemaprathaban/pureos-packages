@@ -4,7 +4,7 @@ Upstream-Contact: Clement Lefebvre <root@linuxmint.com>
 Source: https://github.com/linuxmint/mintsources
 
 Files: *
-Copyright: 2013-2014 Clement Lefebvre <root@linuxmint.com>
+Copyright: 2015  Casey Parker <casey.parker@puri.sm>
 License: GPL-3+
  This program is free software: you can redistribute it and/or modify
  it under the terms of the GNU General Public License as published by

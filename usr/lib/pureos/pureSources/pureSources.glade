@@ -253,7 +253,7 @@
                   <object class="GtkLabel" id="label_description">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
-                    <property name="label" translatable="yes">Linux Mint x "codename"</property>
+                    <property name="label" translatable="yes">PureOS x "codename"</property>
                   </object>
                   <packing>
                     <property name="expand">False</property>

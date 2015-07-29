@@ -9,13 +9,15 @@ import tempfile
 from subprocess import Popen, PIPE
 import subprocess
 
-gettext.install("mintsources", "/usr/share/linuxmint/locale")
+gettext.install("puresources", "/usr/share/pureos/locale")
 
 class PPA_Browser():
 
     def __init__(self, ppa_owner, ppa_name):
         architecture = commands.getoutput("dpkg --print-architecture")
-        codename = commands.getoutput("lsb_release -u -c -s")
+        codename = "trusty"
+        #        codename = commands.getoutput("lsb_release -u -c -s")
+
         ppa_origin = "LP-PPA-%s-%s" % (ppa_owner, ppa_name)
         ppa_origin_simple = "LP-PPA-%s" % (ppa_owner)
         ppa_file = "/var/lib/apt/lists/ppa.launchpad.net_%s_%s_ubuntu_dists_%s_main_binary-%s_Packages" % (ppa_owner, ppa_name, codename, architecture)
@@ -29,7 +31,7 @@ class PPA_Browser():
 
         self.packages_to_install = []
 
-        glade_file = "/usr/lib/linuxmint/mintSources/mintSources.glade"
+        glade_file = "/usr/lib/pureos/pureSources/pureSources.glade"
 
         self.builder = gtk.Builder()
         self.builder.add_from_file(glade_file)

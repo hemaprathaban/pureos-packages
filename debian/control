@@ -1,11 +1,11 @@
-Source: mintsources
+Source: puresources
 Section: admin
 Priority: optional
-Maintainer: Clement Lefebvre <root@linuxmint.com>
+Maintainer: Casey Parker <casey.parker@puri.sm>
 Build-Depends: debhelper (>= 9), python
 Standards-Version: 3.9.5
 
-Package: mintsources
+Package: puresources
 Architecture: all
 Essential: yes
 Depends: python (>= 2.4), python (<< 3), python-gtk2, python-glade2, python-pycurl, synaptic, dash
@@ -15,30 +15,30 @@ Description: Software Sources configuration tool
 
 Package: software-properties-common
 Architecture: all
-Depends: mintsources
+Depends: puresources
 Description: Transitional package
- This package is obsolete and replaced with mintsources.
+ This package is obsolete and replaced with puresources.
 
 Package: software-properties-gtk
 Architecture: all
-Depends: mintsources
+Depends: puresources
 Description: Transitional package
- This package is obsolete and replaced with mintsources.
+ This package is obsolete and replaced with puresources.
 
 Package: software-properties-kde
 Architecture: all
-Depends: mintsources
+Depends: puresources
 Description: Transitional package
- This package is obsolete and replaced with mintsources.
+ This package is obsolete and replaced with puresources.
 
 Package: python-software-properties
 Architecture: all
-Depends: mintsources
+Depends: puresources
 Description: Transitional package
- This package is obsolete and replaced with mintsources.
+ This package is obsolete and replaced with puresources.
 
 Package: python3-software-properties
 Architecture: all
-Depends: mintsources
+Depends: puresources
 Description: Transitional package
- This package is obsolete and replaced with mintsources.
+ This package is obsolete and replaced with puresources.

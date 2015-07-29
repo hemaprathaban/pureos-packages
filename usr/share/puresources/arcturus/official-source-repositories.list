@@ -1,0 +1,5 @@
+deb-src $mirror $codename main
+
+deb-src $basemirror $basecodename main
+deb-src $basemirror $basecodename-updates main
+deb-src $basemirror $basecodename-security main
