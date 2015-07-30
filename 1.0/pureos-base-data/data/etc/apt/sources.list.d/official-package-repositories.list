@@ -1,0 +1,7 @@
+deb http://archive.puri.sm arcturus main
+
+deb http://linux-libre.fsfla.org/pub/linux-libre/freesh freesh main
+
+deb http://nl.archive.trisquel.info/trisquel belenos main
+deb http://nl.archive.trisquel.info/trisquel belenos-updates main
+deb http://nl.archive.trisquel.info/trisquel belenos-security main

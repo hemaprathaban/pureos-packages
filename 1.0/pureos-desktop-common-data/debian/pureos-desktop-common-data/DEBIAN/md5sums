@@ -1,0 +1,5 @@
+1dc8bf478feececa397d6e782df44de2  usr/share/doc/pureos-desktop-common-data/changelog.gz
+1318e566f5308df6f6ee6cfb19efa65f  usr/share/doc/pureos-desktop-common-data/copyright
+01ccfb81d7325f0c395161e7e8a73998  usr/share/gconf/defaults/90_pureos
+05839215a184b7f871b6c8be04df8951  usr/share/glib-2.0/schemas/90_pureos.gschema.override
+a20b46eb1dfc0b348894546423e96e87  usr/share/gnome/applications/mimeapps.list

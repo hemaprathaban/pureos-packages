@@ -1,7 +1,7 @@
 Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
-Upstream-Name: puresources
-Upstream-Contact: Casey Parker <casey.parker@puri.sm>
-Source: https://github.com/purism/puresources
+Upstream-Name: mintsources
+Upstream-Contact: Clement Lefebvre <root@linuxmint.com>
+Source: https://github.com/linuxmint/mintsources
 
 Files: *
 Copyright: 2015  Casey Parker <casey.parker@puri.sm>

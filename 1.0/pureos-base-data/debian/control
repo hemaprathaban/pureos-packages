@@ -2,14 +2,12 @@ Source: pureos-base-data
 Section: pureos
 Priority: important
 Maintainer: PureOS GNU/Linux developers <dev@puri.sm>
-Build-Depends-Indep: debhelper
+Build-Depends-Indep: debhelper (>= 9)
 Standards-Version: 3.5.9.0
 
 Package: pureos-base-data
 Architecture: all
 Priority: important
-Provides: pureos-wallpapers
 Description: PureOS base metapackage - data files.
- Virtual package providing a dependency list for PureOS base installation.
- Provides a console basic environment.
+ Data files for the pureos-base metapackage.
  .

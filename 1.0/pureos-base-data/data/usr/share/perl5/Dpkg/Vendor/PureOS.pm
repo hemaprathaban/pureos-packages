@@ -1,5 +1,4 @@
 # Copyright © 2015 Casey Parker <casey.parker@puri.sm>
-# Copyright © 2010 Ruben Rodriguez <ruben@pureos.info>
 # Copyright © 2009 Raphaël Hertzog <hertzog@debian.org>
 # Copyright © 2008 Ian Jackson <ian@davenant.greenend.org.uk>, Colin Watson
 # <cjwatson@ubuntu.com>, James Westby <jw+debian@jameswestby.net>
@@ -50,8 +49,8 @@ sub run_hook {
         # https://wiki.ubuntu.com/DebianMaintainerField
         if (defined($fields->{'Version'}) and defined($fields->{'Maintainer'}) and
            $fields->{'Version'} =~ /pureos/) {
-           if ($fields->{'Maintainer'} !~ /pureos/i) {
-               if (defined ($ENV{'DEBEMAIL'}) and $ENV{'DEBEMAIL'} =~ /\@pureos\.info/) {
+           if ($fields->{'Maintainer'} !~ /puri/i) {
+               if (defined ($ENV{'DEBEMAIL'}) and $ENV{'DEBEMAIL'} =~ /\@puri\.sm/) {
                    error(_g('Version number suggests PureOS changes, but Maintainer: does not have PureOS address'));
                } else {
                    warning(_g('Version number suggests PureOS changes, but Maintainer: does not have PureOS address'));

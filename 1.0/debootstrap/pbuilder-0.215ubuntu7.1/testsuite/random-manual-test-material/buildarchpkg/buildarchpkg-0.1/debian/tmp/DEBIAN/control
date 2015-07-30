@@ -1,0 +1,9 @@
+Package: buildarchpkg
+Version: 0.1
+Architecture: i386
+Maintainer: Junichi Uekawa <dancer@debian.org>
+Installed-Size: 28
+Section: unknown
+Priority: extra
+Description: <insert up to 60 chars description>
+ <insert long description, indented with spaces>

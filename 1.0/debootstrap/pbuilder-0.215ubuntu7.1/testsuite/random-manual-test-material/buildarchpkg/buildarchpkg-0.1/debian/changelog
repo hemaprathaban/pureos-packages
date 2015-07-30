@@ -1,0 +1,6 @@
+buildarchpkg (0.1) unstable; urgency=low
+
+  * a package that has both arch dep and indep parts.
+
+ -- Junichi Uekawa <dancer@debian.org>  Wed, 13 Jul 2011 21:33:33 +0900
+

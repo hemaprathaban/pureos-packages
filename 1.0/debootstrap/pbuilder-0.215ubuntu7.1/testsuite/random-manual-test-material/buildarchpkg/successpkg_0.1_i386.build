@@ -1,0 +1,13 @@
+ dpkg-buildpackage -rfakeroot -D -us -uc -j3 -i -I
+dpkg-buildpackage: export CFLAGS from dpkg-buildflags (origin: vendor): -g -O2
+dpkg-buildpackage: export CPPFLAGS from dpkg-buildflags (origin: vendor): 
+dpkg-buildpackage: export CXXFLAGS from dpkg-buildflags (origin: vendor): -g -O2
+dpkg-buildpackage: export FFLAGS from dpkg-buildflags (origin: vendor): -g -O2
+dpkg-buildpackage: export LDFLAGS from dpkg-buildflags (origin: vendor): 
+dpkg-buildpackage: source package successpkg
+dpkg-buildpackage: source version 0.1
+dpkg-buildpackage: source changed by Junichi Uekawa <dancer@debian.org>
+ dpkg-source -i -I --before-build buildarchpkg-0.1
+dpkg-buildpackage: host architecture i386
+dpkg-source: error: source package has two conflicting values - buildarchpkg and successpkg
+dpkg-buildpackage: error: dpkg-source -i -I --before-build buildarchpkg-0.1 gave error exit status 255

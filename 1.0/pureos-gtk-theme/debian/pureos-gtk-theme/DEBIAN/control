@@ -1,0 +1,12 @@
+Package: pureos-gtk-theme
+Version: 1.0.6-1
+Architecture: all
+Maintainer: PureOS GNU/Linux developers <dev@puri.sm>
+Installed-Size: 1211
+Depends: gtk2-engines-pixbuf, gtk2-engines-murrine, gtk3-engines-unico, fonts-ekmukta, pureos-wallpapers
+Replaces: pureos-theme-cinnamon
+Provides: pureos-theme-cinnamon
+Section: pureos
+Priority: optional
+Description: PureOS gtk theme.
+ A GTK2/3, metacity and xfwm4 theme for PureOS.

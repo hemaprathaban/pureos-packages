@@ -1,0 +1,88 @@
+ dpkg-buildpackage -rfakeroot -D -us -uc -j3 -i -I
+dpkg-buildpackage: export CFLAGS from dpkg-buildflags (origin: vendor): -g -O2
+dpkg-buildpackage: export CPPFLAGS from dpkg-buildflags (origin: vendor): 
+dpkg-buildpackage: export CXXFLAGS from dpkg-buildflags (origin: vendor): -g -O2
+dpkg-buildpackage: export FFLAGS from dpkg-buildflags (origin: vendor): -g -O2
+dpkg-buildpackage: export LDFLAGS from dpkg-buildflags (origin: vendor): 
+dpkg-buildpackage: source package buildarchpkg
+dpkg-buildpackage: source version 0.1
+dpkg-buildpackage: source changed by Junichi Uekawa <dancer@debian.org>
+ dpkg-source -i -I --before-build buildarchpkg-0.1
+dpkg-buildpackage: host architecture i386
+ fakeroot debian/rules clean
+dh_testdir
+dh_testroot
+rm -f build-stamp configure-stamp
+# Add here commands to clean up after the build process.
+dh_clean 
+dh_clean: Compatibility levels before 5 are deprecated.
+ dpkg-source -i -I -b buildarchpkg-0.1
+dpkg-source: warning: no source format specified in debian/source/format, see dpkg-source(1)
+dpkg-source: info: using source format `1.0'
+dpkg-source: info: building buildarchpkg in buildarchpkg_0.1.tar.gz
+dpkg-source: info: building buildarchpkg in buildarchpkg_0.1.dsc
+ debian/rules build
+dh_testdir
+# Add here commands to configure the package.
+touch configure-stamp
+dh_testdir
+# Add here commands to compile the package.
+touch build-stamp
+ fakeroot debian/rules binary
+dh_testdir
+dh_testroot
+dh_clean -k 
+dh_clean: dh_clean -k is deprecated; use dh_prep instead
+dh_clean: Compatibility levels before 5 are deprecated.
+dh_installdirs
+dh_installdirs: Compatibility levels before 5 are deprecated.
+dh_testdir
+dh_testroot
+dh_installchangelogs 
+dh_installchangelogs: Compatibility levels before 5 are deprecated.
+dh_installdocs
+dh_installdocs: Compatibility levels before 5 are deprecated.
+dh_installexamples
+dh_installexamples: Compatibility levels before 5 are deprecated.
+dh_installman
+dh_installman: Compatibility levels before 5 are deprecated.
+dh_link
+dh_link: Compatibility levels before 5 are deprecated.
+dh_strip
+dh_strip: Compatibility levels before 5 are deprecated.
+dh_compress
+dh_compress: Compatibility levels before 5 are deprecated.
+dh_fixperms
+dh_fixperms: Compatibility levels before 5 are deprecated.
+dh_installdeb
+dh_installdeb: Compatibility levels before 5 are deprecated.
+dh_shlibdeps
+dh_shlibdeps: Compatibility levels before 5 are deprecated.
+dh_gencontrol
+dh_gencontrol: Compatibility levels before 5 are deprecated.
+dpkg-gencontrol: warning: Depends field of package buildarchpkg: unknown substitution variable ${shlibs:Depends}
+dpkg-gencontrol: warning: Depends field of package buildindeppkg: unknown substitution variable ${shlibs:Depends}
+dh_md5sums
+dh_md5sums: Compatibility levels before 5 are deprecated.
+dh_builddeb
+dh_builddeb: Compatibility levels before 5 are deprecated.
+dpkg-deb: `../buildarchpkg_0.1_i386.deb' にパッケージ `buildarchpkg' を構築しています。
+dpkg-deb: `../buildindeppkg_0.1_all.deb' にパッケージ `buildindeppkg' を構築しています。
+ dpkg-genchanges  >../buildarchpkg_0.1_i386.changes
+dpkg-genchanges: including full source code in upload
+ dpkg-source -i -I --after-build buildarchpkg-0.1
+dpkg-buildpackage: full upload; Debian-native package (full source is included)
+Now running lintian...
+W: buildarchpkg source: package-uses-deprecated-debhelper-compat-version 1
+W: buildarchpkg source: ancient-standards-version 3.7.2 (current is 3.9.1)
+E: buildarchpkg: description-is-dh_make-template
+E: buildarchpkg: section-is-dh_make-template
+E: buildarchpkg: no-copyright-file
+W: buildarchpkg: empty-binary-package
+E: buildindeppkg: description-is-dh_make-template
+E: buildindeppkg: section-is-dh_make-template
+E: buildindeppkg: no-copyright-file
+W: buildindeppkg: empty-binary-package
+Finished running lintian.
+Now signing changes and any dsc files...
+Could not find a signing program (pgp or gpg)!

@@ -1,0 +1,92 @@
+#!/usr/bin/env python
+'''
+This was based largely by the original remastersys-skelcopy bash script
+Copyright (C) 2015  Casey Parker <casey.parker@puri.sm>
+
+GNU GPL2
+'''
+
+from os import getuid, path, remove, system
+from sys import argv, exit
+
+script, skelUser = argv
+
+filesList = ['.gconf',
+             '.bashrc',
+             '.gnome2',
+             '.config',
+             '.cinnamon',
+             '.local']
+
+filesToCleanPost = ['.config/chromium',
+                    '.config/midori/cookies.*',
+                    '.config/midori/history.*',
+                    '.config/midori/tabtrash.*',
+                    '.config/midori/running*',
+                    '.config/midori/bookmarks.*',
+                    '.config/user-dirs.*',
+                    '.gconf/system/networking',
+                    '.local/gvfs-metadata',
+                    '.local/share/gvfs-metadata',
+                    '.local/share/applications/wine-*',
+                    '.local/share/Trash',
+                    '.local/share/akonadi',
+                    '.local/share/webkit',
+                    '.bash_logout']
+
+def cleanSkel():
+  ''''''
+  if path.isdir('/home/{0}'.format(skelUser)) == 1:
+    print('\nCleaning up /etc/skel/:')
+  for skelFile in filesList:
+    if path.isdir("/etc/skel/{0}".format(skelFile)) == 1:
+      system('rm -rf /etc/skel/{0}'.format(skelFile))
+      print('rm -rf /etc/skel/{0}'.format(skelFile))
+    elif path.exists("/etc/skel/{0}".format(skelFile)) == 1:
+      system("rm -f /etc/skel/{0}".format(skelFile))
+      print('removing {0} from /etc/skel/'.format(skelFile))
+  return('Clean.')
+
+def copySkel():
+  ''''''
+  print('\nCopying config files to /etc/skel/:')
+  for skelFile in filesList:
+    if path.exists("/home/{0}/{1}".format(skelUser, skelFile)) == 1:
+      system("rsync --exclude=.bash_logout --exclude=.local/share/Trash --exclude=.local/share/gvfs-metadata -a /home/{0}/{1} /etc/skel/".format(skelUser, skelFile))
+      if path.exists('/etc/skel/{0}'.format(skelFile)) == 1:
+        print('{0}'.format(skelFile))
+  return('Copied.')
+
+def cleanPost():
+  ''''''
+  print('\nCleaning after copy')
+  commands = ['for i in /etc/skel/.gnome2/keyrings*; do rm -f $i; done',
+	      """find /etc/skel/ | grep "%s" | xargs rm -rf '{}'""" % skelUser,
+	      """find /etc/skel/ -name "*socket*" | xargs rm -rf '{}'""",
+	      """find /etc/skel/ -name "*cache*" | xargs rm -rf '{}'""",
+	      """grep -Rl "%s" /etc/skel | xargs rm -rf '{}'""" % skelUser,
+	      'chown -R root:root /etc/skel']
+  for skelFile in filesToCleanPost:
+    if path.isdir("/etc/skel/{0}".format(skelFile)) == 1:
+      system('rm -rf /etc/skel/{0}'.format(skelFile))
+      print("found /etc/skel/{0}, removing it".format(skelFile))
+    elif path.exists("/etc/skel/{0}".format(skelFile)) == 1:
+      remove("/etc/skel/{0}".format(skelFile))
+      print("found /etc/skel/{0}, removing it".format(skelFile))
+  for command in commands:
+    system(command)
+  return('Clean.')
+
+def main():
+  ''''''
+  if not getuid() == 0:
+    exit('\nNeed to be root for this.')
+  elif path.isdir('/home/{0}'.format(skelUser)) == 0:
+    exit('/home/{0} not found, does this user exist?'.format(skelUser))
+  else:
+    print(cleanSkel())
+    print(copySkel())
+    print(cleanPost())
+  exit('\n\n /etc/skel has been prepared.')
+
+main()

@@ -1,0 +1,19 @@
+# read pbuilderrc.5 document for notes on specific options.
+
+MIRRORSITE='http://archive.trisquel.info/trisquel'
+OTHERMIRROR='deb http://archive.puri.sm arcturus main'
+PBUILDERSATISFYDEPENDSCMD=/usr/lib/pbuilder/pbuilder-satisfydepends-gdebi
+TIMEOUT_TIME=3h
+USEDEVFS=no
+USEDEVPTS=yes
+USERUNSHM=yes
+USEPROC=yes
+AUTO_DEBSIGN=yes
+CCACHEDIR='/var/cache/pbuilder/ccache'
+BUILDSOURCEROOTCMD=fakeroot
+export DEBIAN_BUILDARCH=core2
+DEBOOTSTRAPOPTS=('--keyring' '/usr/share/keyrings/trisquel-archive-keyring.gpg')
+APTKEYRINGS=('/usr/share/keyrings/pureos-archive-keyring.gpg')
+DEBEMAIL=''
+export DEBIAN_FRONTEND=noninteractive
+DISTRIBUTION=belenos

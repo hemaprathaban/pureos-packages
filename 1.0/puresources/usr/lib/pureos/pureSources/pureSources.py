@@ -899,8 +899,8 @@ class Application(object):
                 description = ppa_info["description"].encode("utf-8")
                 description = description.replace("<", "&lt;").replace(">", "&gt;")
             if self.show_confirm_ppa_dialog(self._main_window, "%s\n\n%s\n\n%s" % (line, description, str(ppa_info["web_link"]))):                                
-                (deb_line, file) = expand_ppa_line(line.strip(), self.config["general"]["codename"])
-                deb_line = expand_http_line(deb_line, self.config["general"]["codename"])
+                (deb_line, file) = expand_ppa_line(line.strip(), self.config["general"]["ubu_codename"])
+                deb_line = expand_http_line(deb_line, self.config["general"]["ubu_codename"])
                 debsrc_line = 'deb-src' + deb_line[3:]
                 
                 # Add the key
@@ -1352,7 +1352,7 @@ if __name__ == "__main__":
 
         if len(args) > 1 and (args[0] == "add-apt-repository"):
             ppa_line = args[1]
-            lsb_codename = commands.getoutput("lsb_release -sc")
+            # lsb_codename = commands.getoutput("lsb_release -sc")
             config_parser = ConfigParser.RawConfigParser()
             config_parser.read("/usr/share/puresources/%s/puresources.conf" % lsb_codename)
             codename = config_parser.get("general", "ubu_codename")

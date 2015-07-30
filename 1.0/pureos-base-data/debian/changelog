@@ -1,41 +1,26 @@
-pureos-base-data (1.1.12) arcturus; urgency=medium
+pureos-base-data (1.2.1) arcturus; urgency=medium
+
+  * 	new file:   data/etc/pbuilderrc
+
+ -- Casey Parker <casey.parker@puri.sm>  Wed, 29 Jul 2015 22:59:29 -0700
+
+pureos-base-data (1.2.0) arcturus; urgency=medium
 
   * separated more of the desktop config files out 
-
- -- Casey Parker <casey.parker@puri.sm>  Sun, 19 Jul 2015 14:34:52 -0700
-
-pureos-base-data (1.1.11) arcturus; urgency=medium
-
-  * Added option nomodeset (#61)
-
- -- Casey Parker <casey.parker@puri.sm>  Sat, 18 Jul 2015 12:22:27 -0700
-
-pureos-base-data (1.1.10) arcturus; urgency=medium
-
   * Added pureos-grub boot image. 
   * Fixed bug in Perl vendor files.
-
- -- Casey Parker <casey.parker@puri.sm>  Wed, 15 Jul 2015 09:49:06 -0700
-
-pureos-base-data (1.1.9) arcturus; urgency=medium
-
   * Updated profile skel files. 
-
- -- Casey Parker <casey.parker@puri.sm>  Wed, 15 Jul 2015 09:36:43 -0700
-
-pureos-base-data (1.1.8) arcturus; urgency=medium
-
-  * fixed grub not using the correct resolution (#52)
+  * fixed grub not using the correct resolution
 
  -- Casey Parker <casey.parker@puri.sm>  Wed, 15 Jul 2015 08:09:49 -0700
 
-pureos-base-data (1.1.5) arcturus; urgency=medium
+pureos-base-data (1.1.0) arcturus; urgency=medium
 
   * additional config
 
  -- Casey Parker <casey.parker@puri.sm>  Wed, 15 Jul 2015 08:09:49 -0700
 
-pureos-base-data (1.1.4) arcturus; urgency=medium
+pureos-base-data (1.0.0) arcturus; urgency=medium
 
   * Initial release.
 

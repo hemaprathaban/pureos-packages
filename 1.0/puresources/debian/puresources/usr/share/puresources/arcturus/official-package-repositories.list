@@ -1,6 +1,4 @@
-deb http://archive.puri.sm $codename main
-
-deb http://linux-libre.fsfla.org/pub/linux-libre/freesh freesh main
+deb $mirror $codename main
 
 deb $basemirror $basecodename main
 deb $basemirror $basecodename-updates main

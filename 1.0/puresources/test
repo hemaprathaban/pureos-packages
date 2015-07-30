@@ -1,5 +1,5 @@
 #!/bin/bash
 
-sudo rm -rf /usr/lib/pureos/pureSources
+sudo rm -rf /usr/lib/linuxmint/mintSources
 sudo cp -R usr /
-puresources
+mintsources

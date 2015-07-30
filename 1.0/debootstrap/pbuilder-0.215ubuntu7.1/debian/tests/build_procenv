@@ -1,0 +1,124 @@
+#!/bin/sh
+set -e
+
+#---------------------------------------------------------------------
+# DEP-8 test for sbuild.
+#
+# Creates a sbuild chroot, builds a package, installs the resulting
+# .deb, then runs the command provided by the .deb.
+#---------------------------------------------------------------------
+
+die()
+{
+    msg="$*"
+    echo "ERROR: $msg" >&2
+    exit 1
+}
+
+# The package we'll ask sbuild to build (we know its buildable since
+# it's already in the archive :-)
+#
+# The advantage of choosing this particular package being that it runs
+# *itself* at the end of its build, which has the nice side-effect of
+# exposing the full sbuild environment to those perusing the autopkgtest
+# logs.
+pkg=procenv
+components=""
+
+dir=/var/cache/pbuilder/result
+
+# Avoid conflict with ADT
+unset TMPDIR
+
+distro=$(lsb_release --id --short|tr '[A-Z]' '[a-z]' || :)
+[ -z "$distro" ] && die "cannot establish distribution"
+
+host_release=$(lsb_release --codename --short || :)
+[ -z "$host_release" ] && die "cannot establish release running on host"
+
+if [ "$distro" = ubuntu ]
+then
+    # Build chroot for latest release.
+    release=$(distro-info --devel)
+    components="main universe"
+elif [ "$distro" = debian ]
+then
+    # Build chroot for latest stable release since
+    # sid may not be buildable on a particular day.
+    release=$(distro-info --stable)
+    components="main"
+else
+    die "need to know where archive is for distro '$distro'"
+fi
+
+# XXX: try to establish the correct archive to use. We used to hard-code
+# the main debian+ubuntu archive urls. But that strategy is not reliable for
+# Ubuntu atleast where some architectures are only available on
+# http://ports.ubuntu.com/. However, we wish to avoid having to maintain
+# a list of architectures for ports.ubuntu.com, hence this simple
+# strategy - use the first remote entry in sources.list
+url=$(grep -v "[ 	]*#" /etc/apt/sources.list|grep http|head -1|awk '{print $2}')
+
+[ -z "$url" ] && die "cannot establish archive to use"
+
+# Have to redirect stderr to avoid ADT thinking the test has failed
+# (the return code is still being checked, so this seems reasonable).
+echo "INFO: Creating pbuilder buildd chroot for release '$release' from url '$url'"
+pbuilder --create --debug \
+    --distribution "$release" \
+    --components "$components"	\
+    --mirror "$url" \
+    --debootstrapopts --variant=buildd 2>&1
+
+if [ ! -d "$dir" ]
+then
+    echo "ERROR: cannot find directory $dir" >&2
+    exit 1
+fi
+
+# Use '--download-only' to avoid unpack which generates a
+# signature warning to stderr, causing this test to fail.
+# Take care to download the package version for the release we will
+# create the chroot for. 
+echo "INFO: Downloading source for package '$pkg' release '$release'"
+apt-get source --download-only "$pkg/$release"
+
+dsc=$(ls ${pkg}*.dsc)
+
+echo "INFO: Building package '$pkg' for release '$release' from '$dsc'"
+pbuilder --build --debug "$dsc" 2>&1
+
+arch=$(dpkg --print-architecture 2>/dev/null)
+[ -z "$arch" ] && die "cannot establish architecture"
+
+pkg_and_version=$(echo "$dsc"|sed 's/\.dsc$//g')
+deb=${dir}/${pkg_and_version}_${arch}.deb
+
+# Do what we can to check if the .deb looks usable (since we may not
+# be able to install it to test it properly)
+echo "INFO: Listing information on '$deb'"
+dpkg --info "$deb"
+
+echo "INFO: Listing contents of '$deb'"
+dpkg --contents "$deb"
+
+extract="$ADTTMP/extract"
+echo "INFO: Extracting '$deb' to '$extract'"
+dpkg --extract "$deb" "$extract"
+
+if [ "$release" = "$host_release" ]
+then
+    echo "INFO: Installing package '$pkg' from '$deb'"
+    dpkg -i "$deb"
+
+    # run the command to prove the build worked but also to expose the
+    # auto-package-test environment used for this test.
+    cmd=$pkg
+    echo "INFO: Showing AutoPkgTest environment by running '$cmd' from package '$pkg'"
+    "$cmd"
+else
+    echo "INFO: Not installing package '$pkg' as host release ('$host_release')"
+    echo "INFO: differs to release package is built for ('$release')"
+fi
+
+echo "INFO: SUCCESS"

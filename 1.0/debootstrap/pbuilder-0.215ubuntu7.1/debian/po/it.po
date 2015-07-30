@@ -1,0 +1,88 @@
+# Italian translation of pbuilder debconf messages.
+# Copyright (C) 2012, pbuilder package copyright holder.
+# This file is distributed under the same license as the pbuilder package.
+# Beatrice Torracca <beatricet@libero.it>, 2012.
+msgid ""
+msgstr ""
+"Project-Id-Version: pbuilder\n"
+"Report-Msgid-Bugs-To: pbuilder@packages.debian.org\n"
+"POT-Creation-Date: 2008-03-07 00:09+0900\n"
+"PO-Revision-Date: 2012-08-27 16:19+0200\n"
+"Last-Translator: Beatrice Torracca <beatricet@libero.it>\n"
+"Language-Team: Italian <debian-l10n-italian@lists.debian.org>\n"
+"Language: it\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Virtaal 0.7.1\n"
+
+#. Type: string
+#. Description
+#: ../pbuilder.templates:1001
+msgid "Default mirror site:"
+msgstr "Sito mirror predefinito:"
+
+#. Type: string
+#. Description
+#: ../pbuilder.templates:1001
+msgid "Please enter the default mirror you want to be used by pbuilder."
+msgstr "Inserire il mirror predefinito che deve essere usato da pbuilder."
+
+#. Type: string
+#. Description
+#: ../pbuilder.templates:1001
+msgid ""
+"If you leave this field blank, there will be one attempt to autodetect this "
+"information. If this attempt fails, you will be prompted again to insert "
+"some valid mirror information."
+msgstr ""
+"Se questo campo viene lasciato vuoto, verrà fatto un tentativo di rilevare "
+"automaticamente questa informazione. Se tale tentativo fallirà, verrà "
+"chiesto nuovamente di inserire una qualche informazione valida per un "
+"mirror."
+
+#. Type: string
+#. Description
+#: ../pbuilder.templates:1001
+msgid "Here is a valid mirror example: http://cdn.debian.net/debian"
+msgstr "Ecco un esempio di mirror valido: http://cdn.debian.net/debian"
+
+#. Type: error
+#. Description
+#: ../pbuilder.templates:2001
+msgid "Default mirror not found"
+msgstr "Mirror predefinito non trovato"
+
+#. Type: error
+#. Description
+#: ../pbuilder.templates:2001
+msgid ""
+"Mirror information detection failed and the user provided no mirror "
+"information."
+msgstr ""
+"Il rilevamento delle informazioni sul mirror non è riuscito e l'utente non "
+"ne ha fornita alcuna."
+
+#. Type: error
+#. Description
+#: ../pbuilder.templates:2001
+msgid "Please enter valid mirror information."
+msgstr "Inserire delle informazioni sul mirror valide."
+
+#. Type: boolean
+#. Description
+#: ../pbuilder.templates:3001
+msgid "Overwrite current configuration?"
+msgstr "Sovrascrivere la configurazione attuale?"
+
+#. Type: boolean
+#. Description
+#: ../pbuilder.templates:3001
+msgid ""
+"Your system seems to have already pbuilder configuration. Proceeding might "
+"discard or overwrite part or the entire pbuilder's configuration."
+msgstr ""
+"Il sistema sembra avere già una configurazione per pbuilder. Procedendo si "
+"potrebbero perdere o sovrascrivere la configurazione di pbuilder in parte o "
+"del tutto."

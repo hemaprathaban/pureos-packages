@@ -1,4 +1,4 @@
-# Copyright © 210 Ruben Rodriguez <ruben@trisquel.info>
+# Copyright © 2010 Ruben Rodriguez <ruben@trisquel.info>
 # Copyright © 2009 Raphaël Hertzog <hertzog@debian.org>
 # Copyright © 2008 Ian Jackson <ian@davenant.greenend.org.uk>, Colin Watson
 # <cjwatson@ubuntu.com>, James Westby <jw+debian@jameswestby.net>

@@ -1,0 +1,5 @@
+deb-src http://archive.puri.sm arcturus main
+
+deb-src http://nl.archive.trisquel.info/trisquel belenos main
+deb-src http://nl.archive.trisquel.info/trisquel belenos-updates main
+deb-src http://nl.archive.trisquel.info/trisquel belenos-security main

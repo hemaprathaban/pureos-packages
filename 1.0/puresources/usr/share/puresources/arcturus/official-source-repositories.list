@@ -1,4 +1,4 @@
-deb-src http://archive.puri.sm $codename main
+deb-src $mirror $codename main
 
 deb-src $basemirror $basecodename main
 deb-src $basemirror $basecodename-updates main
