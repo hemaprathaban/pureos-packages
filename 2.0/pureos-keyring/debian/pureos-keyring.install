@@ -1,0 +1,4 @@
+keyrings/pureos-archive-keyring.gpg usr/share/keyrings
+keyrings/pureos-archive-removed-keys.gpg usr/share/keyrings
+keyrings/pureos-archive-keyring-stable.gpg etc/apt/trusted.gpg.d
+keyrings/pureos-archive-keyring-automatic.gpg etc/apt/trusted.gpg.d

@@ -1,0 +1,32 @@
+pureos-gtk-theme (1.0.6-1) arcturus; urgency=medium
+
+  * Cinnamon theme has been integrated
+  * depend on fonts-ekmukta package
+  * depend on pureos-wallpapers 
+  * 
+
+ -- Casey Parker <casey.parker@puri.sm>  Sun, 19 Jul 2015 12:39:26 -0700
+
+pureos-gtk-theme (1.0.5) arcturus; urgency=medium
+
+  * Updated font selections.
+
+ -- Casey Parker <casey.parker@puri.sm>  Wed, 20 May 2015 17:36:14 -0700
+
+pureos-gtk-theme (1.0.4) arcturus; urgency=medium
+
+  * Updated version.
+
+ -- Casey Parker <casey.parker@puri.sm>  Wed, 20 May 2015 17:36:13 -0700
+
+pureos-gtk-theme (1.0.3) arcturus; urgency=medium
+
+  * Updated compatibility version.
+
+ -- Casey Parker <casey.parker@puri.sm>  Wed, 20 May 2015 17:36:13 -0700
+
+pureos-gtk-theme (1.0.2) arcturus; urgency=medium
+
+  * Initial release.
+
+ -- Casey Parker <casey.parker@puri.sm>  Wed, 20 May 2015 17:36:12 -0700

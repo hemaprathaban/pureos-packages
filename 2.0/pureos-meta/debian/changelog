@@ -1,0 +1,116 @@
+pureos-meta (1.1.24-1) arcturus; urgency=medium
+
+  * Added depends on puresources package
+  * Gracefulness improvements with Trisquel
+  * Added torbrowser-launcher to pureos-desktop-common-data 
+
+ -- Casey Parker <casey.parker@puri.sm>  Sun, 19 Jul 2015 22:43:04 -0700
+
+pureos-meta (1.1.23) arcturus; urgency=medium
+
+  * pureos-cinnamon and pureos-gnome now replace pureos 
+
+ -- Casey Parker <casey.parker@puri.sm>  Sun, 19 Jul 2015 12:19:40 -0700
+
+pureos-meta (1.1.22) arcturus; urgency=medium
+
+  * Removed gnome-orca from pureos-recommended depends 
+
+ -- Casey Parker <casey.parker@puri.sm>  Wed, 08 Jul 2015 11:44:59 -0700
+
+pureos-meta (1.1.21) arcturus; urgency=medium
+
+  * Fixed pureos-cinnamon
+  * Added kdenlive, vlc, gnome-font-viewer 
+
+ -- Casey Parker <casey.parker@puri.sm>  Tue, 07 Jul 2015 13:05:04 -0700
+
+pureos-meta (1.1.19) arcturus; urgency=medium
+
+  * Added gnupg-agent.
+
+ -- Casey Parker <casey.parker@puri.sm>  Sat, 20 Jun 2015 17:45:03 -0700
+
+pureos-meta (1.1.18) arcturus; urgency=medium
+
+  * Added gnupg-curl.
+
+ -- Casey Parker <casey.parker@puri.sm>  Sat, 20 Jun 2015 17:45:03 -0700
+
+pureos-meta (1.1.17) arcturus; urgency=medium
+
+  * Added ek-mukta fonts.
+
+ -- Casey Parker <casey.parker@puri.sm>  Sat, 20 Jun 2015 17:45:02 -0700
+
+pureos-meta (1.1.16) arcturus; urgency=medium
+
+  * Rebuild for new build system.
+
+ -- Casey Parker <casey.parker@puri.sm>  Sat, 20 Jun 2015 17:45:02 -0700
+
+pureos-meta (1.1.15) arcturus; urgency=medium
+
+  * Reverted dependency on config-pgp-pureos.
+
+ -- Casey Parker <casey.parker@puri.sm>  Sat, 20 Jun 2015 17:45:02 -0700
+
+pureos-meta (1.1.14) arcturus; urgency=medium
+
+  * Added dependency on config-pgp-pureos.
+
+ -- Casey Parker <casey.parker@puri.sm>  Sat, 20 Jun 2015 17:45:02 -0700
+
+pureos-meta (1.1.13) arcturus; urgency=medium
+
+  * Added pureos-cinnamon meta-package.
+
+ -- Casey Parker <casey.parker@puri.sm>  Sat, 20 Jun 2015 17:45:01 -0700
+
+pureos-meta (1.1.12) arcturus; urgency=medium
+
+  * Removed pureos-sugar meta-package.
+
+ -- Casey Parker <casey.parker@puri.sm>  Sat, 20 Jun 2015 17:45:01 -0700
+
+pureos-meta (1.1.11) arcturus; urgency=medium
+
+  * Added dependency on xul-ext-privacy-badger.
+
+ -- Casey Parker <casey.parker@puri.sm>  Sat, 20 Jun 2015 17:45:01 -0700
+
+pureos-meta (1.1.10) arcturus; urgency=medium
+
+  * Added dependency on xul-ext-https-everywhere.
+
+ -- Casey Parker <casey.parker@puri.sm>  Sat, 20 Jun 2015 17:45:01 -0700
+
+pureos-meta (1.1.9) arcturus; urgency=medium
+
+  * Added dependency on torbrowser-launcher.
+
+ -- Casey Parker <casey.parker@puri.sm>  Sat, 20 Jun 2015 17:45:00 -0700
+
+pureos-meta (1.1.8) arcturus; urgency=medium
+
+  * Added dependency on apt-transport-https.
+
+ -- Casey Parker <casey.parker@puri.sm>  Sat, 20 Jun 2015 17:45:00 -0700
+
+pureos-meta (1.1.7) arcturus; urgency=medium
+
+  * Added dependency on pidgin-otr.
+
+ -- Casey Parker <casey.parker@puri.sm>  Sat, 20 Jun 2015 17:45:00 -0700
+
+pureos-meta (1.1.6) arcturus; urgency=medium
+
+  * Added dependency on system-config-printer-gnome. (Closes #10)
+
+ -- Casey Parker <casey.parker@puri.sm>  Sat, 20 Jun 2015 17:44:59 -0700
+
+pureos-meta (1.1.5) arcturus; urgency=medium
+
+  * Initial release.
+
+ -- Casey Parker <casey.parker@puri.sm>  Sat, 20 Jun 2015 17:44:59 -0700

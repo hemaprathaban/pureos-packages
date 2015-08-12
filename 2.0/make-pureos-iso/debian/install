@@ -1,0 +1,13 @@
+src/make-pureos-iso usr/bin
+src/skelcopy usr/bin
+src/isolinux.cfg.vesamenu etc/make-pureos-iso/isolinux
+src/pureos-theme.plymouth etc/make-pureos-iso/plymouth/pureos-theme
+src/pureos-theme.script etc/make-pureos-iso/plymouth/pureos-theme
+src/pureos.seed etc/make-pureos-iso/preseed
+src/pureos.version etc/make-pureos-iso
+etc/pureos-iso.conf etc
+images/pureos.png etc/make-pureos-iso/isolinux
+images/progress_bar.png etc/make-pureos-iso/plymouth/make-pureos-iso-theme
+images/progress_box.png etc/make-pureos-iso/plymouth/make-pureos-iso-theme
+images/pureos.png etc/make-pureos-iso/plymouth/make-pureos-iso-theme
+man/man1/make-pureos-iso.1 usr/share/man/man1

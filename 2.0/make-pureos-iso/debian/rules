@@ -1,0 +1,7 @@
+#!/usr/bin/make -f
+
+%:
+	dh $@ 
+
+override_build:
+	gzip -9 debian/usr/share/man/man1/make-pureos-iso.1

@@ -1,0 +1,15 @@
+puresources (1.0.0.1) arcturus; urgency=medium
+
+  * Fixed an issue wherein PureOS mirrors displayed Trisquel names  
+  * Fixed reporting of codenames for adding PPAs 
+
+ -- Casey Parker <casey.parker@puri.sm>  Wed, 29 Jul 2015 11:52:04 -0700
+
+puresources (1.0.0.0) arcturus; urgency=medium
+
+  * Imported code from Linux Mint project
+  * Branded and adapted for PureOS
+  * Changed keyservers to pool.sks-keyservers.net
+  * Initial release 
+
+ -- Casey Parker <casey.parker@puri.sm>  Thu, 23 Jul 2015 12:02:03 -0700

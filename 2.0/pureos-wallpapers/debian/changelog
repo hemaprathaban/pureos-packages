@@ -1,0 +1,35 @@
+pureos-wallpapers (1.0.6) arcturus; urgency=medium
+
+  * Updated for new fonts.
+
+ -- Casey Parker <casey.parker@puri.sm>  Wed, 13 May 2015 21:14:45 -0700
+
+pureos-wallpapers (1.0.5) arcturus; urgency=medium
+
+  * Built with new build system.
+
+ -- Casey Parker <casey.parker@puri.sm>  Wed, 13 May 2015 21:14:44 -0700
+
+pureos-wallpapers (1.0.4) arcturus; urgency=medium
+
+  * Added default settings.
+
+ -- Casey Parker <casey.parker@puri.sm>  Wed, 13 May 2015 21:14:44 -0700
+
+pureos-wallpapers (1.0.3) arcturus; urgency=medium
+
+  * Fix pathname issue.
+
+ -- Casey Parker <casey.parker@puri.sm>  Wed, 13 May 2015 21:14:43 -0700
+
+pureos-wallpapers (1.0.2) arcturus; urgency=medium
+
+  * Updated standards version to 3.9.5
+
+ -- Casey Parker <casey.parker@puri.sm>  Wed, 13 May 2015 21:14:43 -0700
+
+pureos-wallpapers (1.0.1) arcturus; urgency=medium
+
+  * Initial release.
+
+ -- Casey Parker <casey.parker@puri.sm>  Wed, 13 May 2015 21:14:42 -0700

@@ -1,0 +1,7 @@
+make-pureos-iso (1.0.0) arcturus; urgency=medium
+
+  *  First release, based on old remastersys source
+  *  skelcopy rewritten in python 
+  *  ISO name includes date
+
+ -- Casey Parker <casey.parker@puri.sm>  Tue, 21 Jul 2015 15:09:00 -0700

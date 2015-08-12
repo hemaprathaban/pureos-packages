@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE wallpapers SYSTEM "gnome-wp-list.dtd">
+<wallpapers> 
+  <wallpaper>
+    <name>PureOS Purist 1</name>
+    <filename>/usr/share/backgrounds/arcturus.png</filename>
+    <options>stretched</options>
+  </wallpaper>
+  <wallpaper>
+    <name>PureOS Purist 2</name>
+    <filename>/usr/share/backgrounds/librem-004-a.png</filename>
+    <options>stretched</options>
+  </wallpaper>
+  <wallpaper>
+    <name>PureOS Purist 3</name>
+    <filename>/usr/share/backgrounds/librem-022-s.png</filename>
+    <options>stretched</options>
+  </wallpaper>
+  <wallpaper>
+    <name>PureOS Purist 4</name>
+    <filename>/usr/share/backgrounds/purist-019-b-1.png</filename>
+    <options>stretched</options>
+  </wallpaper>
+  <wallpaper>
+    <name>PureOS Purist 5</name>
+    <filename>/usr/share/backgrounds/purist-019-c.png</filename>
+    <options>stretched</options>
+  </wallpaper>
+  <wallpaper>
+    <name>PureOS Purist 6</name>
+    <filename>/usr/share/backgrounds/purist-019-f.png</filename>
+    <options>stretched</options>
+  </wallpaper>
+  <wallpaper>
+    <name>PureOS Purist 7</name>
+    <filename>/usr/share/backgrounds/purist-019-g.png</filename>
+    <options>stretched</options>
+  </wallpaper>
+  <wallpaper>
+    <name>PureOS Purist 8</name>
+    <filename>/usr/share/backgrounds/purist-022-b.png</filename>
+    <options>stretched</options>
+  </wallpaper>
+  <wallpaper>
+    <name>PureOS Purist 9</name>
+    <filename>/usr/share/backgrounds/purist-022-c.png</filename>
+    <options>stretched</options>
+  </wallpaper>
+  <wallpaper>
+    <name>PureOS Purist 10</name>
+    <filename>/usr/share/backgrounds/purist-022-e.png</filename>
+    <options>stretched</options>
+  </wallpaper>
+  <wallpaper>
+    <name>PureOS Purist 11</name>
+    <filename>/usr/share/backgrounds/purist-022-h.png</filename>
+    <options>stretched</options>
+  </wallpaper>
+  <wallpaper>
+    <name>PureOS Purist 12</name>
+    <filename>/usr/share/backgrounds/purist-022-i.png</filename>
+    <options>stretched</options>
+  </wallpaper>
+  <wallpaper>
+    <name>PureOS Purist 13</name>
+    <filename>/usr/share/backgrounds/purist-022-j.png</filename>
+    <options>stretched</options>
+  </wallpaper>
+  <wallpaper>
+    <name>PureOS Purist 14</name>
+    <filename>/usr/share/backgrounds/purist-022-k.png</filename>
+    <options>stretched</options>
+  </wallpaper>
+  <wallpaper>
+    <name>PureOS Purist 15</name>
+    <filename>/usr/share/backgrounds/purist-022-n.png</filename>
+    <options>stretched</options>
+  </wallpaper>
+  <wallpaper>
+    <name>PureOS Purist 16</name>
+    <filename>/usr/share/backgrounds/purist-022-o.png</filename>
+    <options>stretched</options>
+  </wallpaper>
+  <wallpaper>
+    <name>PureOS Purist 17</name>
+    <filename>/usr/share/backgrounds/purist-022-q.png</filename>
+    <options>stretched</options>
+  </wallpaper>
+  <wallpaper>
+    <name>PureOS Purist 18</name>
+    <filename>/usr/share/backgrounds/purist-022-r.png</filename>
+    <options>stretched</options>
+  </wallpaper>
+  <wallpaper>
+    <name>PureOS Purist 19</name>
+    <filename>/usr/share/backgrounds/purist-022-t.png</filename>
+    <options>stretched</options>
+  </wallpaper>
+</wallpapers>

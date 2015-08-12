@@ -1,0 +1,44 @@
+Source: puresources
+Section: admin
+Priority: optional
+Maintainer: Casey Parker <casey.parker@puri.sm>
+Build-Depends: debhelper (>= 9), python
+Standards-Version: 3.9.5
+
+Package: puresources
+Architecture: all
+Essential: yes
+Depends: python (>= 2.4), python (<< 3), python-gtk2, python-glade2, python-pycurl, synaptic, dash
+Replaces: software-properties-common (<< 1), software-properties-gtk (<< 1), software-properties-kde (<< 1), python-software-properties (<< 1), python3-software-properties (<< 1)
+Description: Software Sources configuration tool
+ Configure the sources for installable software and updates.
+
+Package: software-properties-common
+Architecture: all
+Depends: puresources
+Description: Transitional package
+ This package is obsolete and replaced with puresources.
+
+Package: software-properties-gtk
+Architecture: all
+Depends: puresources
+Description: Transitional package
+ This package is obsolete and replaced with puresources.
+
+Package: software-properties-kde
+Architecture: all
+Depends: puresources
+Description: Transitional package
+ This package is obsolete and replaced with puresources.
+
+Package: python-software-properties
+Architecture: all
+Depends: puresources
+Description: Transitional package
+ This package is obsolete and replaced with puresources.
+
+Package: python3-software-properties
+Architecture: all
+Depends: puresources
+Description: Transitional package
+ This package is obsolete and replaced with puresources.

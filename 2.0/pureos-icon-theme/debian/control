@@ -1,0 +1,17 @@
+Source: pureos-icon-theme
+Section: pureos
+Priority: optional
+Maintainer: PureOS GNU/Linux developers <dev@puri.sm>
+Build-Depends-Indep: debhelper
+Standards-Version: 3.9.5
+
+Package: pureos-icon-theme
+Architecture: all
+Priority: optional
+Depends: gnome-brave-icon-theme
+Conflicts: trisquel-icon-theme
+Provides: gnome-icon-theme
+Description: PureOS icon theme.
+ An icon theme for PureOS based on gnome-brave-icon-theme.
+ .
+

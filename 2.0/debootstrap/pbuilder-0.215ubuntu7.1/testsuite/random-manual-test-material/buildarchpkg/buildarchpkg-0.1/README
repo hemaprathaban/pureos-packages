@@ -1,0 +1,2 @@
+This is an example package that simply succeeds, with a arch-indep build dependency
+This will excercise --binary-arch.

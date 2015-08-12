@@ -1,0 +1,81 @@
+# Copyright (C) 2011
+# This file is distributed under the same license as the pbuilder package.
+# Zlatan Todoric <zlatan.todoric@gmail.com>, 2011.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: 0.200\n"
+"Report-Msgid-Bugs-To: pbuilder@packages.debian.org\n"
+"POT-Creation-Date: 2008-03-07 00:09+0900\n"
+"PO-Revision-Date: 2011-07-24 00:01+0100\n"
+"Last-Translator: Zlatan Todoric <zlatan.todoric@gmail.com>\n"
+"Language-Team: Soon to come\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Type: string
+#. Description
+#: ../pbuilder.templates:1001
+msgid "Default mirror site:"
+msgstr "Подразумијевана локација:"
+
+#. Type: string
+#. Description
+#: ../pbuilder.templates:1001
+msgid "Please enter the default mirror you want to be used by pbuilder."
+msgstr "Моливамо вас унесите подразумијевану интернет локацију коју ће користити pbuilder."
+
+#. Type: string
+#. Description
+#: ../pbuilder.templates:1001
+msgid ""
+"If you leave this field blank, there will be one attempt to autodetect this "
+"information. If this attempt fails, you will be prompted again to insert "
+"some valid mirror information."
+msgstr ""
+"Ако ову опцију оставите непопуњену, биће један покушај да се аутоматски открије"
+"ова информација. Ако овај покушај не успије, бићете поново упитани да унесете"
+"валидну информацију о интернет локацији."
+#. Type: string
+#. Description
+#: ../pbuilder.templates:1001
+msgid "Here is a valid mirror example: http://cdn.debian.net/debian"
+msgstr "Овдје је примјер валидне интернет локације: http://cdn.debian.net/debian"
+
+#. Type: error
+#. Description
+#: ../pbuilder.templates:2001
+msgid "Default mirror not found"
+msgstr "Подразумијевана интернет локација није пронађена"
+
+#. Type: error
+#. Description
+#: ../pbuilder.templates:2001
+msgid ""
+"Mirror information detection failed and the user provided no mirror "
+"information."
+msgstr ""
+"Проналазак информације о интернет локацији безуспјешно и корисник није"
+"унио информацију о интернет локацији."
+#. Type: error
+#. Description
+#: ../pbuilder.templates:2001
+msgid "Please enter valid mirror information."
+msgstr "Молимо вас унесите валидну информацију о интернет локацији"
+
+#. Type: boolean
+#. Description
+#: ../pbuilder.templates:3001
+msgid "Overwrite current configuration?"
+msgstr "Замијенити тренутна подешавања?"
+
+#. Type: boolean
+#. Description
+#: ../pbuilder.templates:3001
+msgid ""
+"Your system seems to have already pbuilder configuration. Proceeding might "
+"discard or overwrite part or the entire pbuilder's configuration."
+msgstr ""
+"Ваш систем показује да већ има pbuilder подешавања. Настављањем може одбацити"
+"или замијенити дијелове или читаво pbuilder подешавање."

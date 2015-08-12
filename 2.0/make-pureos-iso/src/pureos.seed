@@ -1,0 +1,22 @@
+tasksel	tasksel/first	multiselect	pureos-base 
+d-i	pkgsel/install-language-support	boolean false
+d-i	partman-auto/method	string	regular
+d-i	partman-auto/choose_recipe	select	atomic
+d-i	partman/default_filesystem	string	ext4
+d-i	pkgsel/include	string	pureos-wallpapers \
+  pureos-cinnamon \
+  pureos-sounds \
+  pureos-minimal \
+  pureos-icon-theme \
+  pureos-gtk-theme \
+  pureos-desktop-common-recommended \
+  pureos-desktop-common-data \
+  pureos-desktop-common \
+  pureos-base-recommended \
+  pueros-base-data \
+  pureos-base \
+  vlc \
+  libreoffice \
+  gimp
+d-i	oem-config-udeb/frontend	string	debconf
+oem-config	oem-config/steps multiselect	language, keyboard, user, network, tasks

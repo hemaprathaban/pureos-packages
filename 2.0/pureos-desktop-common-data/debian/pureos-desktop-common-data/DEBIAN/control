@@ -1,0 +1,11 @@
+Package: pureos-desktop-common-data
+Version: 1.2.0
+Architecture: all
+Maintainer: PureOS GNU/Linux developers <dev@puri.sm>
+Installed-Size: 463
+Depends: fonts-ekmukta
+Replaces: pureos-desktop-common
+Section: pureos
+Priority: important
+Description: PureOS desktop metapackage - data files.
+ Data files for pureos-desktop-common metapackage

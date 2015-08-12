@@ -1,0 +1,32 @@
+Format: 1.8
+Date: Wed, 13 Jul 2011 21:33:33 +0900
+Source: buildarchpkg
+Binary: buildarchpkg buildindeppkg
+Architecture: source i386 all
+Version: 0.1
+Distribution: unstable
+Urgency: low
+Maintainer: Junichi Uekawa <dancer@debian.org>
+Changed-By: Junichi Uekawa <dancer@debian.org>
+Description: 
+ buildarchpkg - <insert up to 60 chars description>
+ buildindeppkg - <insert up to 60 chars description>
+Changes: 
+ buildarchpkg (0.1) unstable; urgency=low
+ .
+   * a package that has both arch dep and indep parts.
+Checksums-Sha1: 
+ 27ab5635b7b57fcf6bac5b748fc31d6bce03e51b 510 buildarchpkg_0.1.dsc
+ ecd8d27fcb20244ae1b1af6543bc2025ce9331d1 1139 buildarchpkg_0.1.tar.gz
+ cbe9a17df0a9b618e4be9cf95a7f7d67b0049545 1000 buildarchpkg_0.1_i386.deb
+ e8aececcc8a80bd22c78281408c69dffede41b6b 1012 buildindeppkg_0.1_all.deb
+Checksums-Sha256: 
+ 35b2f922a32118b5299130a201bed5364cfa95b5c98daf5e778d97d544ee67c1 510 buildarchpkg_0.1.dsc
+ f0627035c1081f3e07a1f50b862f3347976b79834693538a3c92341c7ad67221 1139 buildarchpkg_0.1.tar.gz
+ 98531c45740c89bd79f0ddbd59807bfc3968064b26527a10143702d9c058380e 1000 buildarchpkg_0.1_i386.deb
+ 0926421d1dcbe1d33bce769eca332243dc6bf14d5d6b8e236abb94d435ee9937 1012 buildindeppkg_0.1_all.deb
+Files: 
+ 24e69989d49f0b2a2a8197eafdac0890 510 unknown extra buildarchpkg_0.1.dsc
+ 19e5dddcedcb5cafffb827db19f3c4c2 1139 unknown extra buildarchpkg_0.1.tar.gz
+ d63ce8ae839d4767fd19824e165a5282 1000 unknown extra buildarchpkg_0.1_i386.deb
+ 56f4b7dbf757f582fb315eea12275227 1012 unknown extra buildindeppkg_0.1_all.deb

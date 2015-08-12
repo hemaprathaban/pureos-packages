@@ -1,0 +1,28 @@
+Source: pureos-keyring
+Priority: important
+Section: misc
+Maintainer: Ryan Smith-Roberts <rmsr@puri.sm>
+Build-Depends: debhelper (>= 7)
+Standards-Version: 3.9.3
+
+Package: pureos-keyring
+Architecture: all
+Multi-Arch: foreign
+Depends: gpgv, ${misc:Depends}
+Recommends: gnupg
+Breaks: apt (<< 0.7.25.1)
+Description: GnuPG archive keys of the PureOS archive
+ The PureOS project digitally signs its Release files. This package
+ contains the archive keys used for that.
+
+Package: pureos-keyring-udeb
+XC-Package-Type: udeb
+Priority: optional
+Architecture: all
+Section: debian-installer
+Depends: ${misc:Depends}
+Recommends: gpgv-udeb
+Description: GnuPG keys of the PureOS archive
+ The PureOS project digitally signs its Release files. This package
+ contains the archive keys used for that, in a minimal form for use
+ in the installer.

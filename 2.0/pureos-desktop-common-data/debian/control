@@ -1,0 +1,16 @@
+Source: pureos-desktop-common-data
+Section: pureos
+Priority: important
+Maintainer: PureOS GNU/Linux developers <dev@puri.sm>
+Build-Depends-Indep: debhelper (>= 9)
+Standards-Version: 3.9.5.0
+
+Package: pureos-desktop-common-data
+Architecture: all
+Priority: important
+Replaces: pureos-desktop-common
+Depends: fonts-ekmukta
+Description: PureOS desktop metapackage - data files.
+ Data files for pureos-desktop-common metapackage
+ .
+

@@ -1,0 +1,19 @@
+Source: buildarchpkg
+Section: unknown
+Priority: extra
+Maintainer: Junichi Uekawa <dancer@debian.org>
+Build-Depends: debhelper (>= 5)
+Build-Depends-Indep: ghostscript
+Standards-Version: 3.7.2
+
+Package: buildarchpkg
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: <insert up to 60 chars description>
+ <insert long description, indented with spaces>
+
+Package: buildindeppkg
+Architecture: all
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: <insert up to 60 chars description>
+ <insert long description, indented with spaces>

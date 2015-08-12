@@ -1,0 +1,20 @@
+pureos-desktop-common-data (1.2.0) arcturus; urgency=medium
+
+  * pidgin-otr enabled by default
+
+ -- Casey Parker <casey.parker@puri.sm>  Wed, 29 Jul 2015 15:49:49 -0700
+
+pureos-desktop-common-data (1.1.0) arcturus; urgency=medium
+
+  * updated cinnamon configuration files 
+  * Added ek-mukta.
+
+ -- Casey Parker <casey.parker@puri.sm>  Wed, 15 Jul 2015 10:03:59 -0700
+
+pureos-desktop-common-data (1.0.0) arcturus; urgency=medium
+
+  * Initial release.
+  * torbrowser configuration
+  * desktop icons
+
+ -- Casey Parker <casey.parker@puri.sm>  Wed, 15 Jul 2015 10:03:58 -0700

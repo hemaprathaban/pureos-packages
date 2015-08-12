@@ -1,0 +1,16 @@
+Source: make-pureos-iso
+Section: main
+Priority: optional
+Maintainer: PureOS GNU/Linux developers <dev@puri.sm>
+Build-Depends: debhelper (>= 9.0.0)
+Standards-Version: 3.9.5
+Homepage: http://www.puri.sm
+
+Package: make-pureos-iso
+Architecture: all
+Conflicts: remastersys (<< 1)
+Replaces: remastersys (<< 1)
+Depends: ${misc:Depends}, memtest86+, coreutils, dialog, genisoimage, findutils, bash, python, passwd, sed, squashfs-tools, casper, rsync, mount, eject, libdebian-installer4, os-prober, ubiquity-frontend-debconf, user-setup, discover1 | discover, laptop-detect, syslinux, util-linux, xresprobe
+Description: Backup Your PureOS system.
+ PureOS and variant system remaster This script creates a livecd of the installed system. You can either make a distributable livecd or backup of your system.
+

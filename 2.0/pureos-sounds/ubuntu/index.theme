@@ -1,0 +1,6 @@
+[Sound Theme]
+Name=PureOS
+Directories=stereo
+
+[stereo]
+OutputProfile=stereo

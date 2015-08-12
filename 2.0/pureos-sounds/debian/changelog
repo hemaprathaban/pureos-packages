@@ -1,0 +1,17 @@
+pureos-sounds (1.0.4) arcturus; urgency=medium
+
+  * Built with new build system.
+
+ -- Casey Parker <casey.parker@puri.sm>  Sun, 26 Apr 2015 17:35:42 -0700
+
+pureos-sounds (1.0.3) arcturus; urgency=medium
+
+  * Updated compatibility.
+
+ -- Casey Parker <casey.parker@puri.sm>  Sun, 26 Apr 2015 17:35:42 -0700
+
+pureos-sounds (1.0.2) arcturus; urgency=medium
+
+  * Initial release.
+
+ -- Casey Parker <casey.parker@puri.sm>  Sun, 26 Apr 2015 17:35:42 -0700

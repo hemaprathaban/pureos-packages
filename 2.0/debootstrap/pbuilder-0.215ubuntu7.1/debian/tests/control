@@ -1,0 +1,3 @@
+Tests: build_procenv
+Depends: @, debian-keyring, distro-info, lsb-release, haveged, libnuma1 [linux-i386 linux-amd64 linux-ia64 linux-mips linux-mipsel linux-powerpc linux-ppc64 linux-ppc64el linux-x32], libcap-dev [linux-any]
+Restrictions: needs-root
