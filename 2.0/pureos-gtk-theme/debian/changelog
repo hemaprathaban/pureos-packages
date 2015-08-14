@@ -1,9 +1,8 @@
-pureos-gtk-theme (1.0.6-1) arcturus; urgency=medium
+pureos-gtk-theme (1.0.6) peiramatikos; urgency=low
 
   * Cinnamon theme has been integrated
   * depend on fonts-ekmukta package
   * depend on pureos-wallpapers 
-  * 
 
  -- Casey Parker <casey.parker@puri.sm>  Sun, 19 Jul 2015 12:39:26 -0700
 
