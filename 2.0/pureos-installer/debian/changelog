@@ -1,0 +1,54 @@
+pureos-installer (1.0.9) peiramatikos; urgency=medium
+
+  * First build for PureOS.
+
+ -- Casey Parker <casey.parker@puri.sm>  Tue, 18 Aug 2015 14:09:21 -0700
+
+pureos-installer (1.0.7) debian; urgency=low
+
+  * Fixed bug: missing icon in chroot
+
+ -- Clement Lefebvre <root@linuxmint.com>  Fri,  7 Aug 2009 15:48:00 +0000
+
+pureos-installer (1.0.6) debian; urgency=low
+
+  * Added progress info and reporting to the GUI
+
+ -- Clement Lefebvre <root@linuxmint.com>  Fri,  7 Aug 2009 12:57:00 +0000
+
+pureos-installer (1.0.5) debian; urgency=low
+
+  * Rules now copy desktop from usr to etc when the package is built.
+
+ -- Clement Lefebvre <root@linuxmint.com>  Thu,  6 Aug 2009 15:46:00 +0000
+
+pureos-installer (1.0.4) debian; urgency=low
+
+  * Replaced copy with link in /etc/skel. Fixed problem in control, missing /etc/ in rules file.
+
+ -- Clement Lefebvre <root@linuxmint.com>  Thu,  6 Aug 2009 15:29:00 +0000
+
+pureos-installer (1.0.3) debian; urgency=low
+
+  * Replaced link in /etc/skel with copy of Dekstop file
+
+ -- Clement Lefebvre <root@linuxmint.com>  Thu,  6 Aug 2009 15:23:00 +0000
+
+pureos-installer (1.0.2) debian; urgency=low
+
+  * Added launchers
+
+ -- Clement Lefebvre <root@linuxmint.com>  Thu,  6 Aug 2009 15:05:00 +0000
+
+pureos-installer (1.0.1) debian; urgency=low
+
+  * Various added functionality, bug fixes.
+
+ -- Clement Lefebvre <root@linuxmint.com>  Thu,  6 Aug 2009 13:30:00 +0000
+
+pureos-installer (1.0.0) debian; urgency=low
+
+  * Initial release
+
+ -- Clement Lefebvre <root@linuxmint.com>  Thu,  6 Aug 2009 10:36:00 +0000
+

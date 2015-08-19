@@ -1,0 +1,16 @@
+Source: pureos-installer
+Section: admin
+Priority: optional
+#XSBC-Original-Maintainer: Clement Lefebvre <root@linuxmint.com>
+Maintainer: PureOS GNU/Linux developers <dev@puri.sm>
+Uploaders: Casey Parker <casey.parker@puri.sm>
+Build-Depends: debhelper (>= 9)
+Standards-Version: 3.9.6
+
+Package: pureos-installer
+Architecture: all
+Depends: ${misc:Depends}, python, python, python-gtk2, python-glade2, rsync, grub
+Description: PureOS GNU/Linux live CD installer
+ This is a live CD installer written for PureOS GNU/Linux.
+
+

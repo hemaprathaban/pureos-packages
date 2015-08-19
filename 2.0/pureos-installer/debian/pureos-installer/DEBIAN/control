@@ -1,0 +1,10 @@
+Package: pureos-installer
+Version: 1.0.9
+Architecture: all
+Maintainer: PureOS GNU/Linux developers <dev@puri.sm>
+Installed-Size: 281
+Depends: python, python-gtk2, python-glade2, rsync, grub
+Section: admin
+Priority: optional
+Description: PureOS GNU/Linux live CD installer
+ This is a live CD installer written for PureOS GNU/Linux.
