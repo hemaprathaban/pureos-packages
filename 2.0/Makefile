@@ -5,4 +5,5 @@ clean:
 	*.dsc \
 	*.xz \
 	*.gz \
+	*.bz2 \
 	*.deb

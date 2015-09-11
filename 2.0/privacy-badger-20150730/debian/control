@@ -1,0 +1,18 @@
+Source: privacy-badger
+Section: net
+Priority: optional
+Maintainer: PureOS GNU/Linux developers <dev@puri.sm>
+Build-Depends: debhelper (>> 9), mozilla-devscripts (>= 0.22~)
+Standards-Version: 3.9.6
+Homepage: https://www.eff.org/privacybadger
+
+Package: xul-ext-privacy-badger
+Architecture: all
+Depends: ${misc:Depends}, purebrowser | iceweasel | icecat
+Description: stops third-party trackers from secretly tracking you on the web.
+ Privacy Badger is a browser add-on that stops advertisers and other third-party
+ trackers from secretly tracking where you go and what pages you look at on the
+ web. If an advertiser seems to be tracking you across multiple websites
+ without your permission, Privacy Badger automatically blocks that
+ advertiser from loading any more content in your browser.  To the advertiser,
+ it's like you suddenly disappeared.

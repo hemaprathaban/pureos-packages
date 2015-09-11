@@ -1,0 +1,11 @@
+privacy-badger (20150730-1pureos2) peiramatikos; urgency=medium
+
+  * Packaged for PureOS. (closes #6)
+
+ -- Casey Parker <casey.parker@puri.sm>  Thu, 30 Jul 2015 17:08:50 -0700
+
+privacy-badger (20150730-1) unstable; urgency=low
+
+  * Initial release (Closes: #nnnn)  <nnnn is the bug number of your ITP>
+
+ -- Casey Parker <casey.parker@puri.sm>  Thu, 30 Jul 2015 17:08:49 -0700

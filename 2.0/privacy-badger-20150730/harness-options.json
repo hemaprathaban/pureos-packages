@@ -1,0 +1,391 @@
+{
+ "abort_on_missing": false, 
+ "check_memory": false, 
+ "enable_e10s": false, 
+ "is-sdk-bundled": false, 
+ "jetpackID": "jid1-MnnxcxisBPnSXQ@jetpack", 
+ "loader": "addon-sdk/lib/sdk/loader/cuddlefish.js", 
+ "main": "main", 
+ "mainPath": "privacybadgerfirefox/main", 
+ "manifest": {
+  "privacybadgerfirefox/WorkerQueue": {
+   "docsSHA256": null, 
+   "jsSHA256": "6f6ffe008817efc925011ab3c3206ef89d1420c19fd5ac3a10e5282dd832770e", 
+   "moduleName": "WorkerQueue", 
+   "packageName": "privacybadgerfirefox", 
+   "requirements": {
+    "sdk/timers": "sdk/timers"
+   }, 
+   "sectionName": "lib"
+  }, 
+  "privacybadgerfirefox/abp/prefs": {
+   "docsSHA256": null, 
+   "jsSHA256": "683fbb785a0494c6b0b648fc52504cd13454d1d1b680b0c81fcc248f46738a87", 
+   "moduleName": "abp/prefs", 
+   "packageName": "privacybadgerfirefox", 
+   "requirements": {
+    "chrome": "chrome", 
+    "info": "privacybadgerfirefox/info"
+   }, 
+   "sectionName": "lib"
+  }, 
+  "privacybadgerfirefox/abp/utils": {
+   "docsSHA256": null, 
+   "jsSHA256": "1017a8c5811ccb1c28c5dd83293401ffbcf4fd029743a0c59b01c184fb4d37d2", 
+   "moduleName": "abp/utils", 
+   "packageName": "privacybadgerfirefox", 
+   "requirements": {
+    "./prefs": "privacybadgerfirefox/abp/prefs", 
+    "chrome": "chrome", 
+    "info": "privacybadgerfirefox/info"
+   }, 
+   "sectionName": "lib"
+  }, 
+  "privacybadgerfirefox/contentPolicy": {
+   "docsSHA256": null, 
+   "jsSHA256": "b0db31bd9d88d57bfb73c0ddbfa45502f2b9a00e0522abd6f6e34883bf4ea7b6", 
+   "moduleName": "contentPolicy", 
+   "packageName": "privacybadgerfirefox", 
+   "requirements": {
+    "./cookieUtils": "privacybadgerfirefox/cookieUtils", 
+    "./domainExceptions": "privacybadgerfirefox/domainExceptions", 
+    "./main": "privacybadgerfirefox/main", 
+    "./socialWidgetHandler": "privacybadgerfirefox/socialWidgetHandler", 
+    "./ui": "privacybadgerfirefox/ui", 
+    "./userStorage": "privacybadgerfirefox/userStorage", 
+    "./utils": "privacybadgerfirefox/utils", 
+    "chrome": "chrome", 
+    "sdk/core/heritage": "sdk/core/heritage", 
+    "sdk/event/core": "sdk/event/core", 
+    "sdk/platform/xpcom": "sdk/platform/xpcom", 
+    "sdk/simple-storage": "sdk/simple-storage", 
+    "sdk/tabs": "sdk/tabs"
+   }, 
+   "sectionName": "lib"
+  }, 
+  "privacybadgerfirefox/cookieUtils": {
+   "docsSHA256": null, 
+   "jsSHA256": "f87816fe859d112db0df3f9d86d2694599afd1b70a344b7bfc88cbef753d90c1", 
+   "moduleName": "cookieUtils", 
+   "packageName": "privacybadgerfirefox", 
+   "requirements": {
+    "./abp/utils": "privacybadgerfirefox/abp/utils", 
+    "./utils": "privacybadgerfirefox/utils", 
+    "chrome": "chrome", 
+    "sdk/preferences/service": "sdk/preferences/service", 
+    "sdk/simple-storage": "sdk/simple-storage"
+   }, 
+   "sectionName": "lib"
+  }, 
+  "privacybadgerfirefox/domainExceptions": {
+   "docsSHA256": null, 
+   "jsSHA256": "9849876cb61a08dd2cb75b78b803a7f89c89b1211f3de28bb558aff350a85c31", 
+   "moduleName": "domainExceptions", 
+   "packageName": "privacybadgerfirefox", 
+   "requirements": {
+    "./userStorage": "privacybadgerfirefox/userStorage", 
+    "./utils": "privacybadgerfirefox/utils", 
+    "sdk/page-mod": "sdk/page-mod", 
+    "sdk/request": "sdk/request", 
+    "sdk/self": "sdk/self", 
+    "sdk/simple-storage": "sdk/simple-storage", 
+    "sdk/tabs": "sdk/tabs"
+   }, 
+   "sectionName": "lib"
+  }, 
+  "privacybadgerfirefox/heuristicBlocker": {
+   "docsSHA256": null, 
+   "jsSHA256": "0dd08aafba61bd4434d0444316da7eb1e25206d1e71ab740fa9b3522ae0c7799", 
+   "moduleName": "heuristicBlocker", 
+   "packageName": "privacybadgerfirefox", 
+   "requirements": {
+    "./cookieUtils": "privacybadgerfirefox/cookieUtils", 
+    "./policyCheck": "privacybadgerfirefox/policyCheck", 
+    "./privateBrowsing": "privacybadgerfirefox/privateBrowsing", 
+    "./ui": "privacybadgerfirefox/ui", 
+    "./utils": "privacybadgerfirefox/utils", 
+    "chrome": "chrome", 
+    "sdk/event/core": "sdk/event/core", 
+    "sdk/simple-storage": "sdk/simple-storage", 
+    "sdk/url/utils": "sdk/url/utils"
+   }, 
+   "sectionName": "lib"
+  }, 
+  "privacybadgerfirefox/info": {
+   "docsSHA256": null, 
+   "jsSHA256": "48acb0a88fb23ca96cf5752cc670d4237d588ecb3c59a315828c0a804bb68da5", 
+   "moduleName": "info", 
+   "packageName": "privacybadgerfirefox", 
+   "requirements": {
+    "chrome": "chrome", 
+    "sdk/self": "sdk/self"
+   }, 
+   "sectionName": "lib"
+  }, 
+  "privacybadgerfirefox/main": {
+   "docsSHA256": "8e47cc4d2424667ab6f6db717d570025bccce00c5ddf893c5de0b24bc8cd9277", 
+   "jsSHA256": "c8811a65e6d21366899127ace707dc0c8583d23e983a61813f11eb8508e1d3df", 
+   "moduleName": "main", 
+   "packageName": "privacybadgerfirefox", 
+   "requirements": {
+    "./contentPolicy": "privacybadgerfirefox/contentPolicy", 
+    "./cookieUtils": "privacybadgerfirefox/cookieUtils", 
+    "./heuristicBlocker": "privacybadgerfirefox/heuristicBlocker", 
+    "./policyCheck": "privacybadgerfirefox/policyCheck", 
+    "./prefsListener": "privacybadgerfirefox/prefsListener", 
+    "./privateBrowsing": "privacybadgerfirefox/privateBrowsing", 
+    "./progressListener": "privacybadgerfirefox/progressListener", 
+    "./socialWidgetHandler": "privacybadgerfirefox/socialWidgetHandler", 
+    "./ui": "privacybadgerfirefox/ui", 
+    "./userStorage": "privacybadgerfirefox/userStorage", 
+    "./utils": "privacybadgerfirefox/utils", 
+    "chrome": "chrome", 
+    "sdk/event/core": "sdk/event/core", 
+    "sdk/preferences/service": "sdk/preferences/service", 
+    "sdk/self": "sdk/self", 
+    "sdk/simple-prefs": "sdk/simple-prefs", 
+    "sdk/simple-storage": "sdk/simple-storage", 
+    "sdk/system/events": "sdk/system/events", 
+    "sdk/tabs": "sdk/tabs", 
+    "sdk/windows": "sdk/windows"
+   }, 
+   "sectionName": "lib"
+  }, 
+  "privacybadgerfirefox/policyCheck": {
+   "docsSHA256": null, 
+   "jsSHA256": "90e1c197f17acaddcf0ff4c944253cd643e14dd8a64557356738bc8f0e944a74", 
+   "moduleName": "policyCheck", 
+   "packageName": "privacybadgerfirefox", 
+   "requirements": {
+    "./WorkerQueue": "privacybadgerfirefox/WorkerQueue", 
+    "./cookieUtils": "privacybadgerfirefox/cookieUtils", 
+    "./sha1": "privacybadgerfirefox/sha1", 
+    "./utils": "privacybadgerfirefox/utils", 
+    "sdk/request": "sdk/request", 
+    "sdk/simple-prefs": "sdk/simple-prefs", 
+    "sdk/simple-storage": "sdk/simple-storage", 
+    "sdk/timers": "sdk/timers"
+   }, 
+   "sectionName": "lib"
+  }, 
+  "privacybadgerfirefox/prefsListener": {
+   "docsSHA256": null, 
+   "jsSHA256": "79379c9cb7f4773f72b981fff456495c7d2cf019432ee731cab4e89df8b8ddc3", 
+   "moduleName": "prefsListener", 
+   "packageName": "privacybadgerfirefox", 
+   "requirements": {
+    "./heuristicBlocker": "privacybadgerfirefox/heuristicBlocker", 
+    "./main": "privacybadgerfirefox/main", 
+    "./ui": "privacybadgerfirefox/ui", 
+    "./userStorage": "privacybadgerfirefox/userStorage", 
+    "./utils": "privacybadgerfirefox/utils", 
+    "sdk/event/core": "sdk/event/core", 
+    "sdk/preferences/event-target": "sdk/preferences/event-target", 
+    "sdk/preferences/service": "sdk/preferences/service", 
+    "sdk/self": "sdk/self", 
+    "sdk/simple-prefs": "sdk/simple-prefs", 
+    "sdk/system/events": "sdk/system/events"
+   }, 
+   "sectionName": "lib"
+  }, 
+  "privacybadgerfirefox/privateBrowsing": {
+   "docsSHA256": null, 
+   "jsSHA256": "af5ae095e1d004409176a4754110e29ad44ff998474fcd8116cd9fb587582a3e", 
+   "moduleName": "privateBrowsing", 
+   "packageName": "privacybadgerfirefox", 
+   "requirements": {
+    "sdk/private-browsing": "sdk/private-browsing", 
+    "sdk/simple-storage": "sdk/simple-storage", 
+    "sdk/system/events": "sdk/system/events"
+   }, 
+   "sectionName": "lib"
+  }, 
+  "privacybadgerfirefox/progressListener": {
+   "docsSHA256": null, 
+   "jsSHA256": "926efe448bfe1edc56638e1c189ea69068d0043648e1c531a97083055280f5c9", 
+   "moduleName": "progressListener", 
+   "packageName": "privacybadgerfirefox", 
+   "requirements": {
+    "./socialWidgetHandler": "privacybadgerfirefox/socialWidgetHandler", 
+    "./ui": "privacybadgerfirefox/ui", 
+    "./utils": "privacybadgerfirefox/utils", 
+    "chrome": "chrome", 
+    "sdk/core/heritage": "sdk/core/heritage", 
+    "sdk/platform/xpcom": "sdk/platform/xpcom"
+   }, 
+   "sectionName": "lib"
+  }, 
+  "privacybadgerfirefox/sha1": {
+   "docsSHA256": null, 
+   "jsSHA256": "5705ea72a2f03df852b51d48e561024af8ef0b1d76ce640e0c6748431abc1644", 
+   "moduleName": "sha1", 
+   "packageName": "privacybadgerfirefox", 
+   "requirements": {}, 
+   "sectionName": "lib"
+  }, 
+  "privacybadgerfirefox/socialWidgetHandler": {
+   "docsSHA256": null, 
+   "jsSHA256": "2ef0b16425c49906221015a08f9d50c99f7a6ea8e60c62008f301a7a2afad1cf", 
+   "moduleName": "socialWidgetHandler", 
+   "packageName": "privacybadgerfirefox", 
+   "requirements": {
+    "./socialWidgetLoader": "privacybadgerfirefox/socialWidgetLoader", 
+    "./ui": "privacybadgerfirefox/ui", 
+    "./utils": "privacybadgerfirefox/utils", 
+    "sdk/self": "sdk/self"
+   }, 
+   "sectionName": "lib"
+  }, 
+  "privacybadgerfirefox/socialWidgetLoader": {
+   "docsSHA256": null, 
+   "jsSHA256": "757f2a51e4ea56c75bf798abb38623ab46c546f4038974ef3a82f9e9f417f341", 
+   "moduleName": "socialWidgetLoader", 
+   "packageName": "privacybadgerfirefox", 
+   "requirements": {
+    "sdk/self": "sdk/self"
+   }, 
+   "sectionName": "lib"
+  }, 
+  "privacybadgerfirefox/ui": {
+   "docsSHA256": null, 
+   "jsSHA256": "dde847e3a8a94ff582ab14ef6d4579d70b3ef8c92dd5430e015349b96b117330", 
+   "moduleName": "ui", 
+   "packageName": "privacybadgerfirefox", 
+   "requirements": {
+    "./contentPolicy": "privacybadgerfirefox/contentPolicy", 
+    "./main": "privacybadgerfirefox/main", 
+    "./userStorage": "privacybadgerfirefox/userStorage", 
+    "./utils": "privacybadgerfirefox/utils", 
+    "chrome": "chrome", 
+    "sdk/event/core": "sdk/event/core", 
+    "sdk/panel": "sdk/panel", 
+    "sdk/self": "sdk/self", 
+    "sdk/system/xul-app": "sdk/system/xul-app", 
+    "sdk/tabs": "sdk/tabs", 
+    "sdk/ui/button/toggle": "sdk/ui/button/toggle", 
+    "sdk/widget": "sdk/widget", 
+    "sdk/window/utils": "sdk/window/utils"
+   }, 
+   "sectionName": "lib"
+  }, 
+  "privacybadgerfirefox/userStorage": {
+   "docsSHA256": null, 
+   "jsSHA256": "56e35ac8e74a3ec6fe35327567ead75944b6495c62bb8793fe9e2eaff3c002c3", 
+   "moduleName": "userStorage", 
+   "packageName": "privacybadgerfirefox", 
+   "requirements": {
+    "./abp/utils": "privacybadgerfirefox/abp/utils", 
+    "./cookieUtils": "privacybadgerfirefox/cookieUtils", 
+    "./domainExceptions": "privacybadgerfirefox/domainExceptions", 
+    "./privateBrowsing": "privacybadgerfirefox/privateBrowsing", 
+    "./utils": "privacybadgerfirefox/utils", 
+    "chrome": "chrome", 
+    "sdk/request": "sdk/request", 
+    "sdk/self": "sdk/self", 
+    "sdk/simple-storage": "sdk/simple-storage", 
+    "sdk/timers": "sdk/timers"
+   }, 
+   "sectionName": "lib"
+  }, 
+  "privacybadgerfirefox/utils": {
+   "docsSHA256": null, 
+   "jsSHA256": "3c443e7c393092268d33c95fd3ab46b27c2c62e9872ee9d97badb1a87e4810b3", 
+   "moduleName": "utils", 
+   "packageName": "privacybadgerfirefox", 
+   "requirements": {
+    "./abp/utils": "privacybadgerfirefox/abp/utils", 
+    "chrome": "chrome", 
+    "sdk/tabs": "sdk/tabs", 
+    "sdk/tabs/utils": "sdk/tabs/utils", 
+    "sdk/timers": "sdk/timers"
+   }, 
+   "sectionName": "lib"
+  }
+ }, 
+ "metadata": {
+  "addon-sdk": {
+   "description": "Add-on development made easy.", 
+   "keywords": [
+    "javascript", 
+    "engine", 
+    "addon", 
+    "extension", 
+    "xulrunner", 
+    "firefox", 
+    "browser"
+   ], 
+   "license": "MPL 2.0", 
+   "name": "addon-sdk"
+  }, 
+  "privacybadgerfirefox": {
+   "author": "Electronic Frontier Foundation", 
+   "contributors": [
+    "Yan Zhu", 
+    "Garrett Robinson", 
+    "Monica Chew", 
+    "Cooper Quintin", 
+    "Dan Auerbach", 
+    "Peter Eckersley", 
+    "Jonathan Mayer", 
+    "Hugh D'Andrade", 
+    "Franziska Roesner", 
+    "Jacob Hoffman-Andrews", 
+    "Jeremey Gillula"
+   ], 
+   "description": "Protects privacy by blocking spying ads and invisible trackers.", 
+   "license": "GPL 3", 
+   "main": "main", 
+   "name": "privacybadgerfirefox", 
+   "permissions": {
+    "private-browsing": true
+   }, 
+   "version": "0.2.6"
+  }
+ }, 
+ "name": "privacybadgerfirefox", 
+ "parseable": false, 
+ "preferences": [
+  {
+   "name": "heuristicEnabled", 
+   "title": "Automatic blocking enabled", 
+   "type": "bool", 
+   "value": true
+  }, 
+  {
+   "hidden": true, 
+   "name": "doNotTrackDefaultEnabled", 
+   "title": "Default value of privacy.donottrackheader.enabled", 
+   "type": "bool", 
+   "value": false
+  }, 
+  {
+   "hidden": true, 
+   "name": "doNotTrackDefaultValue", 
+   "title": "Default value of privacy.donottrackheader.value", 
+   "type": "integer", 
+   "value": 1
+  }, 
+  {
+   "name": "socialWidgetReplacementEnabled", 
+   "title": "Social widget replacement enabled", 
+   "type": "bool", 
+   "value": true
+  }, 
+  {
+   "name": "displayCounter", 
+   "title": "Display Tracker Counter (experimental)", 
+   "type": "bool", 
+   "value": false
+  }, 
+  {
+   "name": "blockedDomainRecheckDNT", 
+   "title": "Recheck blocked domains for DNT policy document", 
+   "type": "bool", 
+   "value": true
+  }
+ ], 
+ "preferencesBranch": "jid1-MnnxcxisBPnSXQ@jetpack", 
+ "sdkVersion": "1.17", 
+ "staticArgs": {}, 
+ "verbose": false
+}
